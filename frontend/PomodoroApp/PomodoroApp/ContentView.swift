@@ -8,17 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    let webSocketService: WebSocketService = APIGatewayWebSocketService(url: URL(string: "ws://localhost:8080/echo")!)
+    @StateObject var timerViewModel: TimerViewModel
+    var pomodoroController: PomodoroController
+    init() {
+        let pomodoroTimer = PomodoroTimer(webSocketService: webSocketService)
+        _timerViewModel = StateObject(wrappedValue: TimerViewModel(timer: pomodoroTimer))
+        pomodoroController = .init(webSocketService: webSocketService)
+    }
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("Start Timer") {
+                pomodoroController.startTimer()
+            }
+
+            Button("Stop Timer") {
+                pomodoroController.stopTimer()
+            }
+
+            Button("Focus Time (25 min)") {
+                pomodoroController.setTime(minutes: 25)
+            }
+
+            Button("Short Break (5 min)") {
+                pomodoroController.setTime(minutes: 5)
+            }
+
+            Button("Long Break (15 min)") {
+                pomodoroController.setTime(minutes: 15)
+            }
         }
-        .padding()
+        TimerView(viewModel: timerViewModel)
     }
 }
 
 #Preview {
     ContentView()
 }
+

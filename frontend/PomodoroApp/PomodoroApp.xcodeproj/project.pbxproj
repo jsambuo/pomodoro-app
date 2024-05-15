@@ -48,6 +48,7 @@
 		BF6B9A2C2BF481D800C6F64A /* APIGatewayWebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGatewayWebSocketService.swift; sourceTree = "<group>"; };
 		BF6B9A2D2BF481D800C6F64A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
+		BF6B9A362BF4824600C6F64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BFDE29752BF47BD300B2C76A /* PomodoroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE29782BF47BD300B2C76A /* PomodoroAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroAppApp.swift; sourceTree = "<group>"; };
 		BFDE297A2BF47BD300B2C76A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		BFDE29772BF47BD300B2C76A /* PomodoroApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B9A362BF4824600C6F64A /* Info.plist */,
 				BFDE29782BF47BD300B2C76A /* PomodoroAppApp.swift */,
 				BFDE297A2BF47BD300B2C76A /* ContentView.swift */,
 				BF6B9A2C2BF481D800C6F64A /* APIGatewayWebSocketService.swift */,
@@ -450,6 +452,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PomodoroApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PomodoroApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -486,6 +489,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PomodoroApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PomodoroApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

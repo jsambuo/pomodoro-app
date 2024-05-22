@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import ModuleKit
 
 @main
 struct PomodoroAppApp: App {
+    @StateObject private var appState = AppState()
+    private let moduleManager = ModuleManager(modules: [
+        LoginModule(),
+        MainModule(),
+        SettingsModule(),
+    ])
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouteView(appState.state == .loggedIn ? "/" : "/login")
+                .environmentObject(moduleManager)
+                .environmentObject(appState)
         }
     }
 }

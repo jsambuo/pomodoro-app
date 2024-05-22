@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
@@ -94,4 +94,4 @@ struct LoginView_Previews: PreviewProvider {
         }
         func forgotPassword(email: String) async throws {}
     }
-}
+}*/

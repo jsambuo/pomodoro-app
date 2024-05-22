@@ -11,6 +11,7 @@
 		BF1B779C2BFC6C3C00DF8583 /* CognitoAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B779B2BFC6C3C00DF8583 /* CognitoAuthService.swift */; };
 		BF1B779E2BFC6CEC00DF8583 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B779D2BFC6CEC00DF8583 /* LoginView.swift */; };
 		BF1B77A02BFC6EB700DF8583 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B779F2BFC6EB700DF8583 /* SignupView.swift */; };
+		BF1B77A32BFD877C00DF8583 /* ModuleKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF1B77A22BFD877C00DF8583 /* ModuleKit */; };
 		BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */; };
 		BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2D2BF481D800C6F64A /* TimerView.swift */; };
 		BF6B9A312BF481D800C6F64A /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */; };
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1B77A32BFD877C00DF8583 /* ModuleKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +182,9 @@
 			dependencies = (
 			);
 			name = PomodoroApp;
+			packageProductDependencies = (
+				BF1B77A22BFD877C00DF8583 /* ModuleKit */,
+			);
 			productName = PomodoroApp;
 			productReference = BFDE29752BF47BD300B2C76A /* PomodoroApp.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +257,9 @@
 				Base,
 			);
 			mainGroup = BFDE296C2BF47BD300B2C76A;
+			packageReferences = (
+				BF1B77A12BFD877C00DF8583 /* XCRemoteSwiftPackageReference "ModuleKit" */,
+			);
 			productRefGroup = BFDE29762BF47BD300B2C76A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -657,6 +665,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF1B77A12BFD877C00DF8583 /* XCRemoteSwiftPackageReference "ModuleKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jsambuo/ModuleKit.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF1B77A22BFD877C00DF8583 /* ModuleKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF1B77A12BFD877C00DF8583 /* XCRemoteSwiftPackageReference "ModuleKit" */;
+			productName = ModuleKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFDE296D2BF47BD300B2C76A /* Project object */;
 }

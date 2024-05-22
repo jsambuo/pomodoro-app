@@ -22,10 +22,21 @@ struct MainApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                RouteView(appState.state == .loggedIn ? "/" : "/login")
+                RouteView(appState.state.path)
             }
             .environmentObject(moduleManager)
             .environmentObject(appState)
+        }
+    }
+}
+
+private extension AppState.State {
+    var path: String {
+        switch self {
+        case .loggedIn:
+            return "/"
+        case .loggedOut:
+            return "/login"
         }
     }
 }

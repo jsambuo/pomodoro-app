@@ -12,7 +12,7 @@ class AppState: ObservableObject {
     @Published var state: State = .loggedOut
 
     enum State {
-        case loggedIn
+        case loggedIn(authToken: String)
         case loggedOut
     }
 }

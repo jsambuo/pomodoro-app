@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		BF1B779A2BFC6B9700DF8583 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77992BFC6B9700DF8583 /* AuthService.swift */; };
 		BF1B779C2BFC6C3C00DF8583 /* CognitoAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B779B2BFC6C3C00DF8583 /* CognitoAuthService.swift */; };
-		BF1B779E2BFC6CEC00DF8583 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B779D2BFC6CEC00DF8583 /* LoginView.swift */; };
-		BF1B77A02BFC6EB700DF8583 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B779F2BFC6EB700DF8583 /* SignupView.swift */; };
 		BF1B77A32BFD877C00DF8583 /* ModuleKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF1B77A22BFD877C00DF8583 /* ModuleKit */; };
 		BF1B77A52BFD88D900DF8583 /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77A42BFD88D900DF8583 /* MainModule.swift */; };
 		BF1B77A72BFD8AE400DF8583 /* SettingsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77A62BFD8AE400DF8583 /* SettingsModule.swift */; };
@@ -54,8 +52,6 @@
 /* Begin PBXFileReference section */
 		BF1B77992BFC6B9700DF8583 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		BF1B779B2BFC6C3C00DF8583 /* CognitoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoAuthService.swift; sourceTree = "<group>"; };
-		BF1B779D2BFC6CEC00DF8583 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		BF1B779F2BFC6EB700DF8583 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		BF1B77A42BFD88D900DF8583 /* MainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
 		BF1B77A62BFD8AE400DF8583 /* SettingsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModule.swift; sourceTree = "<group>"; };
 		BF1B77A82BFD8CCF00DF8583 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -177,8 +173,6 @@
 				BFDE297C2BF47BD400B2C76A /* Assets.xcassets */,
 				BFDE297E2BF47BD400B2C76A /* PomodoroApp.entitlements */,
 				BFDE297F2BF47BD400B2C76A /* Preview Content */,
-				BF1B779D2BFC6CEC00DF8583 /* LoginView.swift */,
-				BF1B779F2BFC6EB700DF8583 /* SignupView.swift */,
 			);
 			path = PomodoroApp;
 			sourceTree = "<group>";
@@ -344,7 +338,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF1B77A02BFC6EB700DF8583 /* SignupView.swift in Sources */,
 				BF1B77A52BFD88D900DF8583 /* MainModule.swift in Sources */,
 				BF6B9A352BF481D800C6F64A /* MenuBarController.swift in Sources */,
 				BF1B77A72BFD8AE400DF8583 /* SettingsModule.swift in Sources */,
@@ -360,7 +353,6 @@
 				BF1B77A92BFD8CCF00DF8583 /* AppState.swift in Sources */,
 				BF6B9A342BF481D800C6F64A /* TimerViewModel.swift in Sources */,
 				BF1B77AB2BFD8D9700DF8583 /* LoginModule.swift in Sources */,
-				BF1B779E2BFC6CEC00DF8583 /* LoginView.swift in Sources */,
 				BF6B9A322BF481D800C6F64A /* PomodoroController.swift in Sources */,
 				BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */,
 			);

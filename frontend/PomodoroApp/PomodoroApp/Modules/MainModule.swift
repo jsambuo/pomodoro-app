@@ -26,46 +26,22 @@ struct MainModule: Module {
 struct MainView: View {
     var body: some View {
         TabView {
-            DummyView1()
+            Text("Home View")
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-            DummyView2()
+            RouteView("/pomodoro")
                 .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
+                    Label("Pomodoro", systemImage: "timer")
                 }
-            DummyView3()
+            RouteView("/pomodoro-remote")
                 .tabItem {
-                    Label("Notifications", systemImage: "bell")
+                    Label("Remote", systemImage: "iphone")
                 }
             RouteView("/settings")
                 .tabItem {
-                    Label("Settings", systemImage: "person")
+                    Label("Settings", systemImage: "gear")
                 }
         }
-    }
-}
-
-struct DummyView1: View {
-    var body: some View {
-        Text("Home View")
-    }
-}
-
-struct DummyView2: View {
-    var body: some View {
-        Text("Search View")
-    }
-}
-
-struct DummyView3: View {
-    var body: some View {
-        Text("Notifications View")
-    }
-}
-
-struct DummyView4: View {
-    var body: some View {
-        Text("Profile View")
     }
 }

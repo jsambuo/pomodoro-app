@@ -16,6 +16,7 @@ struct MainApp: App {
         MainModule(),
         SettingsModule(),
         SignUpModule(),
+        PomodoroModule(),
     ])
 
     var body: some Scene {

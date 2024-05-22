@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ModuleKit
+import ProjectI
 
 struct LoginModule: Module {
     var routes: [Route] {
@@ -30,12 +31,8 @@ struct LoginView: View {
     @State private var isLoading: Bool = false
     @State private var token: String?
     
-    let authService: AuthService
-    
-    init(authService: AuthService = CognitoAuthService(clientId: "")) {
-        self.authService = authService
-    }
-    
+    @Inject var authService: AuthService
+
     var body: some View {
         VStack(spacing: 20) {
             Text("Login")
@@ -119,7 +116,9 @@ struct LoginView: View {
 }
 
 #Preview {
-    return LoginView(authService: MockAuthService())
+    var loginView = LoginView()
+    loginView.authService = MockAuthService()
+    return loginView
 
     // Mock AuthService for preview purposes
     struct MockAuthService: AuthService {

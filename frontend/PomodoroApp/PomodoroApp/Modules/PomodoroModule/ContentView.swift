@@ -8,19 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    let webSocketService: WebSocketService = APIGatewayWebSocketService(url: URL(string: "ws://localhost:8080/echo")!)
-    let authService: AuthService = CognitoAuthService(clientId: "[replaceme]")
-    @StateObject var timerViewModel: TimerViewModel
-    var pomodoroController: PomodoroController
-    init() {
-        let pomodoroTimer = PomodoroTimer(webSocketService: webSocketService)
-        _timerViewModel = StateObject(wrappedValue: TimerViewModel(timer: pomodoroTimer))
-        pomodoroController = .init(webSocketService: webSocketService)
-    }
+  
+    let pomodoroController: PomodoroController = .init()
+    
     var body: some View {
-//        LoginView(authService: authService)
-//        LoginView()
-//        SignUpView(authService: authService)
         VStack {
             Button("Start Timer") {
                 pomodoroController.startTimer()
@@ -42,7 +33,6 @@ struct ContentView: View {
                 pomodoroController.setTime(minutes: 15)
             }
         }
-        TimerView(viewModel: timerViewModel)
     }
 }
 

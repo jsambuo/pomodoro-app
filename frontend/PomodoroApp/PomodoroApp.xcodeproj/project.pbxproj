@@ -16,6 +16,7 @@
 		BF1B77AB2BFD8D9700DF8583 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77AA2BFD8D9700DF8583 /* LoginModule.swift */; };
 		BF1B77B02BFD903E00DF8583 /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77AF2BFD903E00DF8583 /* SignUpModule.swift */; };
 		BF1B77B22BFD963100DF8583 /* PomodoroModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77B12BFD963100DF8583 /* PomodoroModule.swift */; };
+		BF1B77B62BFDB38E00DF8583 /* ProjectI in Frameworks */ = {isa = PBXBuildFile; productRef = BF1B77B52BFDB38E00DF8583 /* ProjectI */; };
 		BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */; };
 		BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2D2BF481D800C6F64A /* TimerView.swift */; };
 		BF6B9A312BF481D800C6F64A /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */; };
@@ -84,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1B77B62BFDB38E00DF8583 /* ProjectI in Frameworks */,
 				BF1B77A32BFD877C00DF8583 /* ModuleKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +144,13 @@
 			path = PomodoroModule;
 			sourceTree = "<group>";
 		};
+		BF1B77B42BFDB38E00DF8583 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BFDE296C2BF47BD300B2C76A = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +158,7 @@
 				BFDE29892BF47BD400B2C76A /* PomodoroAppTests */,
 				BFDE29932BF47BD400B2C76A /* PomodoroAppUITests */,
 				BFDE29762BF47BD300B2C76A /* Products */,
+				BF1B77B42BFDB38E00DF8583 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +230,7 @@
 			name = PomodoroApp;
 			packageProductDependencies = (
 				BF1B77A22BFD877C00DF8583 /* ModuleKit */,
+				BF1B77B52BFDB38E00DF8583 /* ProjectI */,
 			);
 			productName = PomodoroApp;
 			productReference = BFDE29752BF47BD300B2C76A /* PomodoroApp.app */;
@@ -295,6 +306,7 @@
 			mainGroup = BFDE296C2BF47BD300B2C76A;
 			packageReferences = (
 				BF1B77A12BFD877C00DF8583 /* XCRemoteSwiftPackageReference "ModuleKit" */,
+				BF1B77B32BFDB28C00DF8583 /* XCRemoteSwiftPackageReference "ProjectI" */,
 			);
 			productRefGroup = BFDE29762BF47BD300B2C76A /* Products */;
 			projectDirPath = "";
@@ -715,6 +727,14 @@
 				kind = branch;
 			};
 		};
+		BF1B77B32BFDB28C00DF8583 /* XCRemoteSwiftPackageReference "ProjectI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jsambuo/ProjectI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -722,6 +742,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BF1B77A12BFD877C00DF8583 /* XCRemoteSwiftPackageReference "ModuleKit" */;
 			productName = ModuleKit;
+		};
+		BF1B77B52BFDB38E00DF8583 /* ProjectI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF1B77B32BFDB28C00DF8583 /* XCRemoteSwiftPackageReference "ProjectI" */;
+			productName = ProjectI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

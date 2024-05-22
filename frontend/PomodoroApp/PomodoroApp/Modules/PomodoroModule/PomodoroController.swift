@@ -6,13 +6,10 @@
 //
 
 import Foundation
+import ProjectI
 
 class PomodoroController {
-    private var webSocketService: WebSocketService
-
-    init(webSocketService: WebSocketService) {
-        self.webSocketService = webSocketService
-    }
+    @Inject private var webSocketService: WebSocketService
 
     func startTimer() {
         webSocketService.send(message: "start")

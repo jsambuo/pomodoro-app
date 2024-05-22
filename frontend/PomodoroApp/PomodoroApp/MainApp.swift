@@ -7,17 +7,29 @@
 
 import SwiftUI
 import ModuleKit
+import ProjectI
 
 @main
 struct MainApp: App {
     @StateObject private var appState = AppState()
-    private let moduleManager = ModuleManager(modules: [
-        LoginModule(),
-        MainModule(),
-        SettingsModule(),
-        SignUpModule(),
-        PomodoroModule(),
-    ])
+    private let moduleManager = ModuleManager()
+    
+    init() {
+        do {
+            try DIContainer.shared.register(AuthService.self, service: CognitoAuthService(clientId: "[replaceme]"))
+            try DIContainer.shared.register(WebSocketService.self, service: APIGatewayWebSocketService(url: URL(string: "ws://localhost:8080/echo")!))
+        } catch {
+            assertionFailure("Error registering depedency: \(error)")
+        }
+        
+        moduleManager.registerModules([
+            LoginModule(),
+            MainModule(),
+            SettingsModule(),
+            SignUpModule(),
+            PomodoroModule(),
+        ])
+    }
 
     var body: some Scene {
         WindowGroup {

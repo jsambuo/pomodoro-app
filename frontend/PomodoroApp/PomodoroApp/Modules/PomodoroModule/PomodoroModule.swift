@@ -7,12 +7,14 @@
 
 import SwiftUI
 import ModuleKit
+import ProjectI
 
 struct PomodoroModule: Module {
+    @Inject var webSocketService: WebSocketService
     var routes: [Route] {
         [
             Route(path: "/pomodoro") {
-                PomodoroView()
+                PomodoroView(webSocketService: webSocketService)
             },
             Route(path: "/pomodoro-remote") {
                 PomodoroRemoteView()
@@ -26,6 +28,11 @@ struct PomodoroModule: Module {
 }
 
 struct PomodoroView: View {
+    @StateObject var timerViewModel: TimerViewModel
+    init(webSocketService: WebSocketService) {
+        let pomodoroTimer = PomodoroTimer(webSocketService: webSocketService)
+        _timerViewModel = StateObject(wrappedValue: TimerViewModel(timer: pomodoroTimer))
+    }
     var body: some View {
         VStack {
             Text("Pomodoro Timer")
@@ -33,6 +40,7 @@ struct PomodoroView: View {
                 .padding()
 
             // Add your Pomodoro timer UI components here
+            TimerView(viewModel: timerViewModel)
 
             Spacer()
         }
@@ -41,14 +49,14 @@ struct PomodoroView: View {
 }
 
 struct PomodoroRemoteView: View {
-    let webSocketService: WebSocketService = APIGatewayWebSocketService(url: URL(string: "ws://localhost:8080/echo")!)
+//    @Inject var webSocketService: WebSocketService
 //    let authService: AuthService = CognitoAuthService(clientId: "[replaceme]")
 //    @StateObject var timerViewModel: TimerViewModel
-    var pomodoroController: PomodoroController
+    var pomodoroController: PomodoroController = .init()
     init() {
-        let pomodoroTimer = PomodoroTimer(webSocketService: webSocketService)
+//        let pomodoroTimer = PomodoroTimer(webSocketService: webSocketService)
 //        _timerViewModel = StateObject(wrappedValue: TimerViewModel(timer: pomodoroTimer))
-        pomodoroController = .init(webSocketService: webSocketService)
+//        pomodoroController = .init(webSocketService: webSocketService)
     }
     var body: some View {
         VStack {

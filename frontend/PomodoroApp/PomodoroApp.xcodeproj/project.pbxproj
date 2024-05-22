@@ -16,6 +16,7 @@
 		BF1B77A72BFD8AE400DF8583 /* SettingsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77A62BFD8AE400DF8583 /* SettingsModule.swift */; };
 		BF1B77A92BFD8CCF00DF8583 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77A82BFD8CCF00DF8583 /* AppState.swift */; };
 		BF1B77AB2BFD8D9700DF8583 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77AA2BFD8D9700DF8583 /* LoginModule.swift */; };
+		BF1B77B02BFD903E00DF8583 /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77AF2BFD903E00DF8583 /* SignUpModule.swift */; };
 		BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */; };
 		BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2D2BF481D800C6F64A /* TimerView.swift */; };
 		BF6B9A312BF481D800C6F64A /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */; };
@@ -23,7 +24,7 @@
 		BF6B9A332BF481D800C6F64A /* APIGatewayWebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2C2BF481D800C6F64A /* APIGatewayWebSocketService.swift */; };
 		BF6B9A342BF481D800C6F64A /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2A2BF481D800C6F64A /* TimerViewModel.swift */; };
 		BF6B9A352BF481D800C6F64A /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A292BF481D800C6F64A /* MenuBarController.swift */; };
-		BFDE29792BF47BD300B2C76A /* PomodoroAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE29782BF47BD300B2C76A /* PomodoroAppApp.swift */; };
+		BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE29782BF47BD300B2C76A /* MainApp.swift */; };
 		BFDE297B2BF47BD300B2C76A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE297A2BF47BD300B2C76A /* ContentView.swift */; };
 		BFDE297D2BF47BD400B2C76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDE297C2BF47BD400B2C76A /* Assets.xcassets */; };
 		BFDE29812BF47BD400B2C76A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDE29802BF47BD400B2C76A /* Preview Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		BF1B77A62BFD8AE400DF8583 /* SettingsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModule.swift; sourceTree = "<group>"; };
 		BF1B77A82BFD8CCF00DF8583 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BF1B77AA2BFD8D9700DF8583 /* LoginModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
+		BF1B77AF2BFD903E00DF8583 /* SignUpModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModule.swift; sourceTree = "<group>"; };
 		BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimer.swift; sourceTree = "<group>"; };
 		BF6B9A292BF481D800C6F64A /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		BF6B9A2A2BF481D800C6F64A /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -67,7 +69,7 @@
 		BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
 		BF6B9A362BF4824600C6F64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BFDE29752BF47BD300B2C76A /* PomodoroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDE29782BF47BD300B2C76A /* PomodoroAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroAppApp.swift; sourceTree = "<group>"; };
+		BFDE29782BF47BD300B2C76A /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		BFDE297A2BF47BD300B2C76A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BFDE297C2BF47BD400B2C76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFDE297E2BF47BD400B2C76A /* PomodoroApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroApp.entitlements; sourceTree = "<group>"; };
@@ -105,6 +107,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF1B77AC2BFD8F0600DF8583 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */,
+				BF6B9A2C2BF481D800C6F64A /* APIGatewayWebSocketService.swift */,
+				BF1B77992BFC6B9700DF8583 /* AuthService.swift */,
+				BF1B779B2BFC6C3C00DF8583 /* CognitoAuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BF1B77AD2BFD8F1A00DF8583 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BF1B77AE2BFD8F8700DF8583 /* PomodoroModule */,
+				BF1B77A42BFD88D900DF8583 /* MainModule.swift */,
+				BF1B77A62BFD8AE400DF8583 /* SettingsModule.swift */,
+				BF1B77AA2BFD8D9700DF8583 /* LoginModule.swift */,
+				BF1B77AF2BFD903E00DF8583 /* SignUpModule.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BF1B77AE2BFD8F8700DF8583 /* PomodoroModule */ = {
+			isa = PBXGroup;
+			children = (
+				BFDE297A2BF47BD300B2C76A /* ContentView.swift */,
+				BF6B9A292BF481D800C6F64A /* MenuBarController.swift */,
+				BF6B9A2B2BF481D800C6F64A /* PomodoroController.swift */,
+				BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */,
+				BF6B9A2D2BF481D800C6F64A /* TimerView.swift */,
+				BF6B9A2A2BF481D800C6F64A /* TimerViewModel.swift */,
+			);
+			path = PomodoroModule;
+			sourceTree = "<group>";
+		};
 		BFDE296C2BF47BD300B2C76A = {
 			isa = PBXGroup;
 			children = (
@@ -128,27 +166,16 @@
 		BFDE29772BF47BD300B2C76A /* PomodoroApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF1B77AD2BFD8F1A00DF8583 /* Modules */,
+				BF1B77AC2BFD8F0600DF8583 /* Services */,
 				BF6B9A362BF4824600C6F64A /* Info.plist */,
-				BFDE29782BF47BD300B2C76A /* PomodoroAppApp.swift */,
-				BFDE297A2BF47BD300B2C76A /* ContentView.swift */,
-				BF6B9A2C2BF481D800C6F64A /* APIGatewayWebSocketService.swift */,
-				BF6B9A292BF481D800C6F64A /* MenuBarController.swift */,
-				BF6B9A2B2BF481D800C6F64A /* PomodoroController.swift */,
-				BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */,
-				BF6B9A2D2BF481D800C6F64A /* TimerView.swift */,
-				BF6B9A2A2BF481D800C6F64A /* TimerViewModel.swift */,
-				BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */,
+				BFDE29782BF47BD300B2C76A /* MainApp.swift */,
+				BF1B77A82BFD8CCF00DF8583 /* AppState.swift */,
 				BFDE297C2BF47BD400B2C76A /* Assets.xcassets */,
 				BFDE297E2BF47BD400B2C76A /* PomodoroApp.entitlements */,
 				BFDE297F2BF47BD400B2C76A /* Preview Content */,
-				BF1B77992BFC6B9700DF8583 /* AuthService.swift */,
-				BF1B779B2BFC6C3C00DF8583 /* CognitoAuthService.swift */,
 				BF1B779D2BFC6CEC00DF8583 /* LoginView.swift */,
 				BF1B779F2BFC6EB700DF8583 /* SignupView.swift */,
-				BF1B77A42BFD88D900DF8583 /* MainModule.swift */,
-				BF1B77A62BFD8AE400DF8583 /* SettingsModule.swift */,
-				BF1B77A82BFD8CCF00DF8583 /* AppState.swift */,
-				BF1B77AA2BFD8D9700DF8583 /* LoginModule.swift */,
 			);
 			path = PomodoroApp;
 			sourceTree = "<group>";
@@ -325,12 +352,13 @@
 				BF6B9A312BF481D800C6F64A /* PomodoroTimer.swift in Sources */,
 				BF1B779A2BFC6B9700DF8583 /* AuthService.swift in Sources */,
 				BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */,
+				BF1B77B02BFD903E00DF8583 /* SignUpModule.swift in Sources */,
 				BF1B77A92BFD8CCF00DF8583 /* AppState.swift in Sources */,
 				BF6B9A342BF481D800C6F64A /* TimerViewModel.swift in Sources */,
 				BF1B77AB2BFD8D9700DF8583 /* LoginModule.swift in Sources */,
 				BF1B779E2BFC6CEC00DF8583 /* LoginView.swift in Sources */,
 				BF6B9A322BF481D800C6F64A /* PomodoroController.swift in Sources */,
-				BFDE29792BF47BD300B2C76A /* PomodoroAppApp.swift in Sources */,
+				BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

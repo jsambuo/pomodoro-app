@@ -19,8 +19,8 @@ struct ContentView: View {
     }
     var body: some View {
 //        LoginView(authService: authService)
-        LoginView()
-        SignUpView(authService: authService)
+//        LoginView()
+//        SignUpView(authService: authService)
         VStack {
             Button("Start Timer") {
                 pomodoroController.startTimer()

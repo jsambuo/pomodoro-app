@@ -11,7 +11,7 @@ import ModuleKit
 struct LoginModule: Module {
     var routes: [Route] {
         [
-            Route(path: "/login") { parameters in
+            Route(path: "/login") {
                 LoginView()
             }
         ]
@@ -23,7 +23,7 @@ struct LoginModule: Module {
 }
 
 struct LoginView: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject private var appState: AppState
 
     var body: some View {
         VStack {
@@ -39,7 +39,15 @@ struct LoginView: View {
                 Text("Log In")
             }
             .padding()
+            
+            Spacer()
+
+            // Link to SignUpView using NavigationLink
+            NavigationLink(destination: RouteView("/signup")) {
+                Text("Don't have an account? Sign Up")
+                    .foregroundColor(.blue)
+            }
+            .padding()
         }
     }
 }
-

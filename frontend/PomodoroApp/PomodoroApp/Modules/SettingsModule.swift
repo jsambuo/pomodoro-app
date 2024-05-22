@@ -11,7 +11,7 @@ import SwiftUI
 struct SettingsModule: Module {
     var routes: [Route] {
         [
-            Route(path: "/settings") { _ in
+            Route(path: "/settings") {
                 SettingsView()
             }
         ]

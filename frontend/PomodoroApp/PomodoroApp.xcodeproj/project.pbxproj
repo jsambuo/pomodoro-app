@@ -17,6 +17,8 @@
 		BF1B77B02BFD903E00DF8583 /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77AF2BFD903E00DF8583 /* SignUpModule.swift */; };
 		BF1B77B22BFD963100DF8583 /* PomodoroModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77B12BFD963100DF8583 /* PomodoroModule.swift */; };
 		BF1B77B62BFDB38E00DF8583 /* ProjectI in Frameworks */ = {isa = PBXBuildFile; productRef = BF1B77B52BFDB38E00DF8583 /* ProjectI */; };
+		BF1B77B82BFDC67300DF8583 /* PomodoroRemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77B72BFDC67300DF8583 /* PomodoroRemoteView.swift */; };
+		BF1B77BA2BFDC69700DF8583 /* PomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77B92BFDC69700DF8583 /* PomodoroView.swift */; };
 		BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */; };
 		BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2D2BF481D800C6F64A /* TimerView.swift */; };
 		BF6B9A312BF481D800C6F64A /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */; };
@@ -25,7 +27,6 @@
 		BF6B9A342BF481D800C6F64A /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2A2BF481D800C6F64A /* TimerViewModel.swift */; };
 		BF6B9A352BF481D800C6F64A /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A292BF481D800C6F64A /* MenuBarController.swift */; };
 		BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE29782BF47BD300B2C76A /* MainApp.swift */; };
-		BFDE297B2BF47BD300B2C76A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE297A2BF47BD300B2C76A /* ContentView.swift */; };
 		BFDE297D2BF47BD400B2C76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDE297C2BF47BD400B2C76A /* Assets.xcassets */; };
 		BFDE29812BF47BD400B2C76A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDE29802BF47BD400B2C76A /* Preview Assets.xcassets */; };
 		BFDE298B2BF47BD400B2C76A /* PomodoroAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE298A2BF47BD400B2C76A /* PomodoroAppTests.swift */; };
@@ -59,6 +60,8 @@
 		BF1B77AA2BFD8D9700DF8583 /* LoginModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
 		BF1B77AF2BFD903E00DF8583 /* SignUpModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModule.swift; sourceTree = "<group>"; };
 		BF1B77B12BFD963100DF8583 /* PomodoroModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroModule.swift; sourceTree = "<group>"; };
+		BF1B77B72BFDC67300DF8583 /* PomodoroRemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroRemoteView.swift; sourceTree = "<group>"; };
+		BF1B77B92BFDC69700DF8583 /* PomodoroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroView.swift; sourceTree = "<group>"; };
 		BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimer.swift; sourceTree = "<group>"; };
 		BF6B9A292BF481D800C6F64A /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		BF6B9A2A2BF481D800C6F64A /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		BF6B9A362BF4824600C6F64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BFDE29752BF47BD300B2C76A /* PomodoroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE29782BF47BD300B2C76A /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
-		BFDE297A2BF47BD300B2C76A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BFDE297C2BF47BD400B2C76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFDE297E2BF47BD400B2C76A /* PomodoroApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroApp.entitlements; sourceTree = "<group>"; };
 		BFDE29802BF47BD400B2C76A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -133,13 +135,14 @@
 		BF1B77AE2BFD8F8700DF8583 /* PomodoroModule */ = {
 			isa = PBXGroup;
 			children = (
-				BFDE297A2BF47BD300B2C76A /* ContentView.swift */,
 				BF6B9A292BF481D800C6F64A /* MenuBarController.swift */,
 				BF6B9A2B2BF481D800C6F64A /* PomodoroController.swift */,
 				BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */,
 				BF6B9A2D2BF481D800C6F64A /* TimerView.swift */,
 				BF6B9A2A2BF481D800C6F64A /* TimerViewModel.swift */,
 				BF1B77B12BFD963100DF8583 /* PomodoroModule.swift */,
+				BF1B77B72BFDC67300DF8583 /* PomodoroRemoteView.swift */,
+				BF1B77B92BFDC69700DF8583 /* PomodoroView.swift */,
 			);
 			path = PomodoroModule;
 			sourceTree = "<group>";
@@ -354,11 +357,12 @@
 				BF6B9A352BF481D800C6F64A /* MenuBarController.swift in Sources */,
 				BF1B77A72BFD8AE400DF8583 /* SettingsModule.swift in Sources */,
 				BF1B779C2BFC6C3C00DF8583 /* CognitoAuthService.swift in Sources */,
-				BFDE297B2BF47BD300B2C76A /* ContentView.swift in Sources */,
 				BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */,
 				BF1B77B22BFD963100DF8583 /* PomodoroModule.swift in Sources */,
+				BF1B77B82BFDC67300DF8583 /* PomodoroRemoteView.swift in Sources */,
 				BF6B9A332BF481D800C6F64A /* APIGatewayWebSocketService.swift in Sources */,
 				BF6B9A312BF481D800C6F64A /* PomodoroTimer.swift in Sources */,
+				BF1B77BA2BFDC69700DF8583 /* PomodoroView.swift in Sources */,
 				BF1B779A2BFC6B9700DF8583 /* AuthService.swift in Sources */,
 				BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */,
 				BF1B77B02BFD903E00DF8583 /* SignUpModule.swift in Sources */,

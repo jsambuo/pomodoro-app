@@ -22,7 +22,6 @@ struct MainModule: Module {
     }
 }
 
-
 struct MainView: View {
     var body: some View {
         TabView {
@@ -44,4 +43,9 @@ struct MainView: View {
                 }
         }
     }
+}
+
+#Preview {
+    MainView()
+        .environmentObject(ModuleManager())
 }

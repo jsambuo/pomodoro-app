@@ -1,4 +1,5 @@
 import Vapor
+import JWT
 
 func routes(_ app: Application) throws {
     app.get { req async in
@@ -21,6 +22,14 @@ func routes(_ app: Application) throws {
                         name: "John Doe",
                         email: "john@example.com")
         return user
+    }
+    
+    let protectedRoutes = app.grouped(AuthTokenPayload.authenticator())
+                            .grouped(AuthTokenPayload.guardMiddleware())
+    protectedRoutes.get("protected") { req -> String in
+        // This route is now protected and only accessible to authenticated users
+        let authToken = try req.auth.require(AuthTokenPayload.self)
+        return "You have accessed a protected route. Welcome \(authToken)!"
     }
     
     // WebSocket route

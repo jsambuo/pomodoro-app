@@ -9,12 +9,14 @@ let package = Package(
     dependencies: [
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.92.4"),
+        .package(url: "https://github.com/vapor/jwt.git", from: "5.0.0-beta"),
     ],
     targets: [
         .executableTarget(
             name: "App",
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
+                .product(name: "JWT", package: "jwt"),
             ],
             swiftSettings: swiftSettings
         ),

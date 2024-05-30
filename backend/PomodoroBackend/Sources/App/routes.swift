@@ -1,7 +1,12 @@
 import Vapor
 import JWT
+import AWSDynamoDB
 
-func routes(_ app: Application) throws {
+func routes(_ app: Application) async throws {
+    let dynamoDB = try await DynamoDBClient()
+    let todoController = TodoController(dynamoDB: dynamoDB)
+    try app.register(collection: todoController)
+
     app.get { req async in
         "It works!"
     }

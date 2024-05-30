@@ -45,5 +45,5 @@ public func configure(_ app: Application) async throws {
     try await app.jwt.keys.addFromURL(.init(string: "[replaceme]"))
 
     // register routes
-    try routes(app)
+    try await routes(app)
 }

@@ -1,0 +1,59 @@
+# Track all zip files with Git LFS
+*.zip filter=lfs diff=lfs merge=lfs -text
+
+# Track other common binary files with Git LFS
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.doc filter=lfs diff=lfs merge=lfs -text
+*.docx filter=lfs diff=lfs merge=lfs -text
+*.ppt filter=lfs diff=lfs merge=lfs -text
+*.pptx filter=lfs diff=lfs merge=lfs -text
+*.xls filter=lfs diff=lfs merge=lfs -text
+*.xlsx filter=lfs diff=lfs merge=lfs -text
+
+# Normalize and convert to LF line endings for text files
+* text=auto
+
+# Explicitly declare text files we want to always be normalized and converted to LF line endings
+*.c text
+*.cpp text
+*.cs text
+*.h text
+*.hpp text
+*.java text
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.html text
+*.css text
+*.scss text
+*.json text
+*.md text
+*.xml text
+*.yml text
+*.yaml text
+
+# Ensure shell scripts have LF line endings
+*.sh text eol=lf
+
+# Ensure batch scripts have CRLF line endings
+*.bat text eol=crlf
+
+# Handle line endings for configuration files
+*.gitattributes text eol=lf
+*.gitignore text eol=lf
+*.editorconfig text eol=lf
+*.dockerignore text eol=lf
+
+# Handle line endings for Markdown and other documentation files
+*.md text eol=lf
+*.rst text eol=lf
+
+# Handle line endings for CSV files
+*.csv text eol=lf

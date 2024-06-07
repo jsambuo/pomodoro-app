@@ -1,13 +1,23 @@
 # ================================
 # Build image
 # ================================
-FROM swift:5.10-jammy as build
+FROM swift:5.10.0-amazonlinux2 as build
 
-# Install OS updates
-RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
-    && apt-get -q update \
-    && apt-get -q dist-upgrade -y \
-    && apt-get install -y libjemalloc-dev
+# Install build dependencies
+RUN yum update -y && \
+    yum install -y \
+    openssl-devel \
+    libcurl-devel \
+    libxml2-devel \
+    krb5-devel \
+    libidn2-devel \
+    libunistring-devel \
+    libpsl-devel \
+    keyutils-libs-devel \
+    libselinux-devel \
+    pcre2-devel \
+    libnghttp2-devel \
+    xz-devel
 
 # Set up a build area
 WORKDIR /build
@@ -21,13 +31,13 @@ RUN swift package resolve --skip-update \
         $([ -f ./Package.resolved ] && echo "--force-resolved-versions" || true)
 
 # Copy entire repo into container
-COPY . .
+COPY ./Public ./Public
+COPY ./Sources ./Sources
+COPY ./Tests  ./Tests
 
 # Build everything, with optimizations, with static linking, and using jemalloc
 # N.B.: The static version of jemalloc is incompatible with the static Swift runtime.
-RUN swift build -c release \
-                --static-swift-stdlib \
-                -Xlinker -ljemalloc
+RUN swift build -c release
 
 # Switch to the staging area
 WORKDIR /staging
@@ -46,43 +56,39 @@ RUN find -L "$(swift build --package-path /build -c release --show-bin-path)/" -
 RUN [ -d /build/Public ] && { mv /build/Public ./Public && chmod -R a-w ./Public; } || true
 RUN [ -d /build/Resources ] && { mv /build/Resources ./Resources && chmod -R a-w ./Resources; } || true
 
-# ================================
-# Run image
-# ================================
-FROM ubuntu:jammy
-
-# Make sure all system packages are up to date, and install only essential packages.
-RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
-    && apt-get -q update \
-    && apt-get -q dist-upgrade -y \
-    && apt-get -q install -y \
-      libjemalloc2 \
-      ca-certificates \
-      tzdata \
-# If your app or its dependencies import FoundationNetworking, also install `libcurl4`.
-      # libcurl4 \
-# If your app or its dependencies import FoundationXML, also install `libxml2`.
-      # libxml2 \
-    && rm -r /var/lib/apt/lists/*
-
-# Create a vapor user and group with /app as its home directory
-RUN useradd --user-group --create-home --system --skel /dev/null --home-dir /app vapor
+# # ================================
+# # Run image
+# # ================================
+FROM amazonlinux:2023
 
 # Switch to the new home directory
 WORKDIR /app
 
-# Copy built executable and any staged resources from builder
-COPY --from=build --chown=vapor:vapor /staging /app
+# Copy the executable from the build stage
+COPY --from=build /staging/App /app/bootstrap
+
+# Copy required libraries
+COPY --from=build /usr/lib/swift/linux/libswiftCore.so /app/
+COPY --from=build /usr/lib/swift/linux/libswift_Concurrency.so /app/
+COPY --from=build /usr/lib/swift/linux/libswift_StringProcessing.so /app/
+COPY --from=build /usr/lib/swift/linux/libswift_RegexParser.so /app/
+COPY --from=build /usr/lib/swift/linux/libswiftGlibc.so /app/
+COPY --from=build /usr/lib/swift/linux/libBlocksRuntime.so /app/
+COPY --from=build /usr/lib/swift/linux/libdispatch.so /app/
+COPY --from=build /usr/lib/swift/linux/libswiftDispatch.so /app/
+COPY --from=build /usr/lib/swift/linux/libFoundation.so /app/
+COPY --from=build /usr/lib/swift/linux/libFoundationNetworking.so /app/
+COPY --from=build /usr/lib/swift/linux/libicuucswift.so.69 /app/
+COPY --from=build /usr/lib/swift/linux/libicui18nswift.so.69 /app/
+COPY --from=build /usr/lib/swift/linux/libicudataswift.so.69 /app/
+COPY --from=build /lib64/libcrypto.so.10 /app/
 
 # Provide configuration needed by the built-in crash reporter and some sensible default behaviors.
 ENV SWIFT_BACKTRACE=enable=yes,sanitize=yes,threads=all,images=all,interactive=no,swift-backtrace=./swift-backtrace-static
-
-# Ensure all further commands run as the vapor user
-USER vapor:vapor
 
 # Let Docker bind to port 8080
 EXPOSE 8080
 
 # Start the Vapor service when the image is run, default to listening on 8080 in production environment
-ENTRYPOINT ["./App"]
+ENTRYPOINT ["/app/bootstrap"]
 CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "8080"]

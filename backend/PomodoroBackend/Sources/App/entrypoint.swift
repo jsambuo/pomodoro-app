@@ -1,5 +1,6 @@
 import Vapor
 import Logging
+import VaporAWSLambdaRuntime
 
 @main
 enum Entrypoint {
@@ -16,6 +17,11 @@ enum Entrypoint {
             app.logger.report(error: error)
             throw error
         }
+
+        if let _ = Environment.get("LAMBDA_ENABLED") {
+            app.servers.use(.lambda)
+        }
+
         try await app.execute()
     }
 }

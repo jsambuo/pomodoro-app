@@ -14,3 +14,7 @@ output "dynamodb_secret_access_key" {
   value = aws_iam_access_key.dynamodb_access_key.secret
   sensitive = true
 }
+
+output "vapor_lambda_url" {
+  value = aws_lambda_function_url.vapor_lambda_url.function_url
+}

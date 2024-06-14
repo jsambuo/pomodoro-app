@@ -25,9 +25,9 @@ struct MainModule: Module {
 struct MainView: View {
     var body: some View {
         TabView {
-            Text("Home View")
+            RouteView("/todos")
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("Todo", systemImage: "house")
                 }
             RouteView("/pomodoro")
                 .tabItem {

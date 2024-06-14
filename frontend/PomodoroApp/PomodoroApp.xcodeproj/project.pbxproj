@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF116A6B2C1C056D00C90267 /* TodoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF116A6A2C1C056D00C90267 /* TodoModule.swift */; };
+		BF116A6E2C1C07AC00C90267 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF116A6D2C1C07AC00C90267 /* TodoListView.swift */; };
+		BF116A702C1C07C100C90267 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF116A6F2C1C07C100C90267 /* TodoListViewModel.swift */; };
+		BF116A722C1C07F600C90267 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF116A712C1C07F600C90267 /* TodoDetailView.swift */; };
+		BF116A742C1C080B00C90267 /* TodoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF116A732C1C080B00C90267 /* TodoDetailViewModel.swift */; };
+		BF116A762C1C0F4B00C90267 /* TodoCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF116A752C1C0F4B00C90267 /* TodoCreateView.swift */; };
+		BF116A782C1C105100C90267 /* TodoCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF116A772C1C105100C90267 /* TodoCreateViewModel.swift */; };
+		BF116A7A2C1C14B500C90267 /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF116A792C1C14B500C90267 /* TodoService.swift */; };
+		BF116A7C2C1C153C00C90267 /* InMemoryTodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF116A7B2C1C153C00C90267 /* InMemoryTodoService.swift */; };
 		BF1B779A2BFC6B9700DF8583 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77992BFC6B9700DF8583 /* AuthService.swift */; };
 		BF1B779C2BFC6C3C00DF8583 /* CognitoAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B779B2BFC6C3C00DF8583 /* CognitoAuthService.swift */; };
 		BF1B77A32BFD877C00DF8583 /* ModuleKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF1B77A22BFD877C00DF8583 /* ModuleKit */; };
@@ -52,6 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF116A6A2C1C056D00C90267 /* TodoModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModule.swift; sourceTree = "<group>"; };
+		BF116A6D2C1C07AC00C90267 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		BF116A6F2C1C07C100C90267 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
+		BF116A712C1C07F600C90267 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+		BF116A732C1C080B00C90267 /* TodoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailViewModel.swift; sourceTree = "<group>"; };
+		BF116A752C1C0F4B00C90267 /* TodoCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCreateView.swift; sourceTree = "<group>"; };
+		BF116A772C1C105100C90267 /* TodoCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCreateViewModel.swift; sourceTree = "<group>"; };
+		BF116A792C1C14B500C90267 /* TodoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoService.swift; sourceTree = "<group>"; };
+		BF116A7B2C1C153C00C90267 /* InMemoryTodoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryTodoService.swift; sourceTree = "<group>"; };
 		BF1B77992BFC6B9700DF8583 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		BF1B779B2BFC6C3C00DF8583 /* CognitoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoAuthService.swift; sourceTree = "<group>"; };
 		BF1B77A42BFD88D900DF8583 /* MainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
@@ -109,6 +127,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF116A6C2C1C076C00C90267 /* TodoModule */ = {
+			isa = PBXGroup;
+			children = (
+				BF116A6A2C1C056D00C90267 /* TodoModule.swift */,
+				BF116A6D2C1C07AC00C90267 /* TodoListView.swift */,
+				BF116A6F2C1C07C100C90267 /* TodoListViewModel.swift */,
+				BF116A712C1C07F600C90267 /* TodoDetailView.swift */,
+				BF116A732C1C080B00C90267 /* TodoDetailViewModel.swift */,
+				BF116A752C1C0F4B00C90267 /* TodoCreateView.swift */,
+				BF116A772C1C105100C90267 /* TodoCreateViewModel.swift */,
+			);
+			path = TodoModule;
+			sourceTree = "<group>";
+		};
 		BF1B77AC2BFD8F0600DF8583 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +148,8 @@
 				BF6B9A2C2BF481D800C6F64A /* APIGatewayWebSocketService.swift */,
 				BF1B77992BFC6B9700DF8583 /* AuthService.swift */,
 				BF1B779B2BFC6C3C00DF8583 /* CognitoAuthService.swift */,
+				BF116A792C1C14B500C90267 /* TodoService.swift */,
+				BF116A7B2C1C153C00C90267 /* InMemoryTodoService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -123,6 +157,7 @@
 		BF1B77AD2BFD8F1A00DF8583 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BF116A6C2C1C076C00C90267 /* TodoModule */,
 				BF1B77AE2BFD8F8700DF8583 /* PomodoroModule */,
 				BF1B77A42BFD88D900DF8583 /* MainModule.swift */,
 				BF1B77A62BFD8AE400DF8583 /* SettingsModule.swift */,
@@ -355,22 +390,31 @@
 			files = (
 				BF1B77A52BFD88D900DF8583 /* MainModule.swift in Sources */,
 				BF6B9A352BF481D800C6F64A /* MenuBarController.swift in Sources */,
+				BF116A6E2C1C07AC00C90267 /* TodoListView.swift in Sources */,
 				BF1B77A72BFD8AE400DF8583 /* SettingsModule.swift in Sources */,
 				BF1B779C2BFC6C3C00DF8583 /* CognitoAuthService.swift in Sources */,
 				BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */,
 				BF1B77B22BFD963100DF8583 /* PomodoroModule.swift in Sources */,
+				BF116A7A2C1C14B500C90267 /* TodoService.swift in Sources */,
 				BF1B77B82BFDC67300DF8583 /* PomodoroRemoteView.swift in Sources */,
 				BF6B9A332BF481D800C6F64A /* APIGatewayWebSocketService.swift in Sources */,
+				BF116A742C1C080B00C90267 /* TodoDetailViewModel.swift in Sources */,
 				BF6B9A312BF481D800C6F64A /* PomodoroTimer.swift in Sources */,
 				BF1B77BA2BFDC69700DF8583 /* PomodoroView.swift in Sources */,
+				BF116A762C1C0F4B00C90267 /* TodoCreateView.swift in Sources */,
 				BF1B779A2BFC6B9700DF8583 /* AuthService.swift in Sources */,
 				BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */,
 				BF1B77B02BFD903E00DF8583 /* SignUpModule.swift in Sources */,
 				BF1B77A92BFD8CCF00DF8583 /* AppState.swift in Sources */,
 				BF6B9A342BF481D800C6F64A /* TimerViewModel.swift in Sources */,
+				BF116A702C1C07C100C90267 /* TodoListViewModel.swift in Sources */,
 				BF1B77AB2BFD8D9700DF8583 /* LoginModule.swift in Sources */,
 				BF6B9A322BF481D800C6F64A /* PomodoroController.swift in Sources */,
+				BF116A7C2C1C153C00C90267 /* InMemoryTodoService.swift in Sources */,
+				BF116A722C1C07F600C90267 /* TodoDetailView.swift in Sources */,
+				BF116A782C1C105100C90267 /* TodoCreateViewModel.swift in Sources */,
 				BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */,
+				BF116A6B2C1C056D00C90267 /* TodoModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

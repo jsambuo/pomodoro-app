@@ -19,9 +19,12 @@ struct TodoCreateView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
 
-            Button("Create") {
-                viewModel.createTodo()
-            }
+            Button("Create", 
+                   action: {
+                Task {
+                    await viewModel.createTodo()
+                }
+            })
             .disabled(viewModel.isCreateButtonDisabled)
             .padding()
 

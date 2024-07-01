@@ -16,16 +16,24 @@ struct TodoDetailView: View {
         VStack {
             if let todo = viewModel.todo {
                 Text(todo.title)
-                Button("Complete") {
-                    viewModel.completeTodo()
-                }
-                Button("Delete") {
-                    viewModel.deleteTodo()
-                }
+                Button("Complete",
+                       action: {
+                    Task {
+                        await viewModel.completeTodo()
+                    }
+                })
+                Button("Delete",
+                       action: {
+                    Task {
+                        await viewModel.deleteTodo()
+                    }
+                })
             } else {
                 Text("Loading...")
                     .onAppear {
-                        viewModel.loadTodoDetail(id: id)
+                        Task {
+                            await viewModel.loadTodoDetail(id: id)
+                        }
                     }
             }
         }

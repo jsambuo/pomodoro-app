@@ -8,11 +8,16 @@
 import Foundation
 import ProjectI
 
-class TodoListViewModel: ObservableObject {
+@MainActor
+final class TodoListViewModel: ObservableObject {
     @Published var todos: [Todo] = []
     @Inject private var todoService: TodoService
 
-    func loadTodos() {
-        self.todos = todoService.fetchTodos()
+    func loadTodos() async {
+        do {
+            self.todos = try await todoService.fetchTodos()
+        } catch {
+            print("Handle this")
+        }
     }
 }

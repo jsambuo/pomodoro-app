@@ -9,7 +9,8 @@ import Combine
 import SwiftUI
 import ProjectI
 
-class TodoCreateViewModel: ObservableObject {
+@MainActor
+final class TodoCreateViewModel: ObservableObject {
     @Published var title: String = ""
     @Inject private var todoService: TodoService
     var isCreateButtonDisabled: Bool {
@@ -17,9 +18,13 @@ class TodoCreateViewModel: ObservableObject {
     }
     var dismiss: (() -> Void)?
 
-    func createTodo() {
+    func createTodo() async {
         guard !isCreateButtonDisabled else { return }
-        todoService.createTodoItem(title: title)
+        do {
+            _ = try await todoService.createTodoItem(title: title)
+        } catch {
+            print("Handle this")
+        }
         dismiss?()
     }
 }

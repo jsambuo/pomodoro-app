@@ -11,8 +11,12 @@ import ModuleKit
 struct TodoListView: View {
     @StateObject var viewModel: TodoListViewModel
 
-    init(viewModel: TodoListViewModel = TodoListViewModel()) {
-        _viewModel = StateObject(wrappedValue: viewModel)
+    init(viewModel: TodoListViewModel? = nil) {
+        if let viewModel = viewModel {
+            _viewModel = StateObject(wrappedValue: viewModel)
+        } else {
+            _viewModel = StateObject(wrappedValue: TodoListViewModel())
+        }
     }
 
     var body: some View {
@@ -47,9 +51,7 @@ struct TodoListView: View {
                     }
                 }
             }
-            .onAppear {
-                viewModel.loadTodos()
-            }
+            .task(viewModel.loadTodos)
         }
     }
 }

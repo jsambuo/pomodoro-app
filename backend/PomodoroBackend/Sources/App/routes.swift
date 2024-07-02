@@ -6,6 +6,7 @@ func routes(_ app: Application) async throws {
     let dynamoDB = try await DynamoDBClient()
     let todoController = TodoController(dynamoDB: dynamoDB)
     try app.register(collection: todoController)
+    try app.register(collection: FriendsController(dynamoDB: dynamoDB))
 
     app.get { req async in
         "It works!"

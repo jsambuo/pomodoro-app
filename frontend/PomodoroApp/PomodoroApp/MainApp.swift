@@ -19,6 +19,7 @@ struct MainApp: App {
             try DIContainer.shared.register(AuthService.self, service: CognitoAuthService(clientId: "[replaceme]"))
             try DIContainer.shared.register(WebSocketService.self, service: APIGatewayWebSocketService(url: URL(string: "ws://localhost:8080/echo")!))
             try DIContainer.shared.register(TodoService.self, service: InMemoryTodoService())
+            try DIContainer.shared.register(FriendsService.self, service: InMemoryFriendsService())
         } catch {
             assertionFailure("Error registering depedency: \(error)")
         }
@@ -30,6 +31,7 @@ struct MainApp: App {
             SignUpModule(),
             PomodoroModule(),
             TodoModule(),
+            FriendsListModule(),
         ])
     }
 

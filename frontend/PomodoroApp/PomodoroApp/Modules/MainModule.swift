@@ -37,9 +37,9 @@ struct MainView: View {
                 .tabItem {
                     Label("Remote", systemImage: "iphone")
                 }
-            RouteView("/settings")
+            RouteView("/friends")
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Label("Friends", systemImage: "gear")
                 }
         }
     }

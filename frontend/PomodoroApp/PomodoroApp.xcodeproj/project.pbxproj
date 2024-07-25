@@ -28,12 +28,12 @@
 		BF1B77B62BFDB38E00DF8583 /* ProjectI in Frameworks */ = {isa = PBXBuildFile; productRef = BF1B77B52BFDB38E00DF8583 /* ProjectI */; };
 		BF1B77B82BFDC67300DF8583 /* PomodoroRemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77B72BFDC67300DF8583 /* PomodoroRemoteView.swift */; };
 		BF1B77BA2BFDC69700DF8583 /* PomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77B92BFDC69700DF8583 /* PomodoroView.swift */; };
-		BF5794782C1FF1AF00A54D68 /* APITodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5794772C1FF1AF00A54D68 /* APITodoService.swift */; };
 		BF1F74742C327C380064ED09 /* FriendsListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F74732C327C380064ED09 /* FriendsListModule.swift */; };
 		BF1F74762C327C490064ED09 /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F74752C327C490064ED09 /* FriendsListView.swift */; };
 		BF1F74782C3280380064ED09 /* FriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F74772C3280380064ED09 /* FriendsService.swift */; };
 		BF1F747A2C3280510064ED09 /* FriendsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F74792C3280510064ED09 /* FriendsAPIService.swift */; };
 		BF1F747C2C32806F0064ED09 /* InMemoryFriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F747B2C32806F0064ED09 /* InMemoryFriendsService.swift */; };
+		BF5794782C1FF1AF00A54D68 /* APITodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5794772C1FF1AF00A54D68 /* APITodoService.swift */; };
 		BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */; };
 		BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2D2BF481D800C6F64A /* TimerView.swift */; };
 		BF6B9A312BF481D800C6F64A /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */; };
@@ -48,6 +48,9 @@
 		BFDE298B2BF47BD400B2C76A /* PomodoroAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE298A2BF47BD400B2C76A /* PomodoroAppTests.swift */; };
 		BFDE29952BF47BD400B2C76A /* PomodoroAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE29942BF47BD400B2C76A /* PomodoroAppUITests.swift */; };
 		BFDE29972BF47BD400B2C76A /* PomodoroAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE29962BF47BD400B2C76A /* PomodoroAppUITestsLaunchTests.swift */; };
+		D412BE672C43A903003BA88D /* ChatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE662C43A903003BA88D /* ChatModule.swift */; };
+		D412BE692C43A91D003BA88D /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE682C43A91D003BA88D /* ChatView.swift */; };
+		D412BE6B2C43A939003BA88D /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE6A2C43A939003BA88D /* ConversationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,12 +90,12 @@
 		BF1B77B12BFD963100DF8583 /* PomodoroModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroModule.swift; sourceTree = "<group>"; };
 		BF1B77B72BFDC67300DF8583 /* PomodoroRemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroRemoteView.swift; sourceTree = "<group>"; };
 		BF1B77B92BFDC69700DF8583 /* PomodoroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroView.swift; sourceTree = "<group>"; };
-		BF5794772C1FF1AF00A54D68 /* APITodoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITodoService.swift; sourceTree = "<group>"; };
 		BF1F74732C327C380064ED09 /* FriendsListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListModule.swift; sourceTree = "<group>"; };
 		BF1F74752C327C490064ED09 /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 		BF1F74772C3280380064ED09 /* FriendsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsService.swift; sourceTree = "<group>"; };
 		BF1F74792C3280510064ED09 /* FriendsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPIService.swift; sourceTree = "<group>"; };
 		BF1F747B2C32806F0064ED09 /* InMemoryFriendsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFriendsService.swift; sourceTree = "<group>"; };
+		BF5794772C1FF1AF00A54D68 /* APITodoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITodoService.swift; sourceTree = "<group>"; };
 		BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimer.swift; sourceTree = "<group>"; };
 		BF6B9A292BF481D800C6F64A /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		BF6B9A2A2BF481D800C6F64A /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -112,6 +115,9 @@
 		BFDE29902BF47BD400B2C76A /* PomodoroAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE29942BF47BD400B2C76A /* PomodoroAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroAppUITests.swift; sourceTree = "<group>"; };
 		BFDE29962BF47BD400B2C76A /* PomodoroAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D412BE662C43A903003BA88D /* ChatModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModule.swift; sourceTree = "<group>"; };
+		D412BE682C43A91D003BA88D /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		D412BE6A2C43A939003BA88D /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,7 @@
 		BF1B77AD2BFD8F1A00DF8583 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D412BE652C43A8E9003BA88D /* ChatModule */,
 				BF1F74722C327C260064ED09 /* FriendsListModule */,
 				BF116A6C2C1C076C00C90267 /* TodoModule */,
 				BF1B77AE2BFD8F8700DF8583 /* PomodoroModule */,
@@ -277,6 +284,16 @@
 				BFDE29962BF47BD400B2C76A /* PomodoroAppUITestsLaunchTests.swift */,
 			);
 			path = PomodoroAppUITests;
+			sourceTree = "<group>";
+		};
+		D412BE652C43A8E9003BA88D /* ChatModule */ = {
+			isa = PBXGroup;
+			children = (
+				D412BE662C43A903003BA88D /* ChatModule.swift */,
+				D412BE682C43A91D003BA88D /* ChatView.swift */,
+				D412BE6A2C43A939003BA88D /* ConversationView.swift */,
+			);
+			path = ChatModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +456,7 @@
 				BFBAC83A2C59F98600925A1A /* InMemoryAuthService.swift in Sources */,
 				BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */,
 				BF1B77B02BFD903E00DF8583 /* SignUpModule.swift in Sources */,
+				D412BE672C43A903003BA88D /* ChatModule.swift in Sources */,
 				BF1B77A92BFD8CCF00DF8583 /* AppState.swift in Sources */,
 				BF6B9A342BF481D800C6F64A /* TimerViewModel.swift in Sources */,
 				BF116A702C1C07C100C90267 /* TodoListViewModel.swift in Sources */,
@@ -449,8 +467,10 @@
 				BF1F74742C327C380064ED09 /* FriendsListModule.swift in Sources */,
 				BF116A722C1C07F600C90267 /* TodoDetailView.swift in Sources */,
 				BF116A782C1C105100C90267 /* TodoCreateViewModel.swift in Sources */,
+				D412BE692C43A91D003BA88D /* ChatView.swift in Sources */,
 				BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */,
 				BF116A6B2C1C056D00C90267 /* TodoModule.swift in Sources */,
+				D412BE6B2C43A939003BA88D /* ConversationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

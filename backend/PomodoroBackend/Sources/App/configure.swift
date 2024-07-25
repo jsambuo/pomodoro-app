@@ -42,7 +42,7 @@ public func configure(_ app: Application) async throws {
     // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
     // Fetch JWKS from AWS Cognito
-    try await app.jwt.keys.addFromURL(.init(string: "[replaceme]"))
+//    try await app.jwt.keys.addFromURL(.init(string: "[replaceme]"))
 
     // register routes
     try await routes(app)

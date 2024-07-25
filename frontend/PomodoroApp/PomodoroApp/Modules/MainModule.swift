@@ -42,8 +42,12 @@ struct MainView: View {
                     Label("Settings", systemImage: "gear")
                 }
             RouteView("/pomodoro-remote")
+				.tabItem {
+					Label("Remote", systemImage: "iphone")
+				}
+            RouteView("/chat")
                 .tabItem {
-                    Label("Remote", systemImage: "iphone")
+                    Label("Chat", systemImage: "gear")
                 }
         }
     }

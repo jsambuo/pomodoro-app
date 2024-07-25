@@ -32,6 +32,7 @@ struct MainApp: App {
             PomodoroModule(),
             TodoModule(),
             FriendsListModule(),
+            ChatModule(),
         ])
     }
 

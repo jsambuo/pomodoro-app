@@ -74,23 +74,24 @@ struct ChatController: RouteCollection {
         }
     }
 
-    // HTTP endpoint for sending messages
-    func sendMessage(req: Request) throws -> HTTPStatus {
-        let messageDTO = try req.content.decode(CreateMessageDTO.self)
-        let message = Message(
-            id: UUID(),
-            content: messageDTO.content,
-            senderID: messageDTO.senderID,
-            receiverID: messageDTO.receiverID,
-            createdAt: Date()
-        )
-        Storage.shared.messages.append(message)
+	// HTTP endpoint for sending messages
+	func sendMessage(req: Request) async throws -> HTTPStatus {
+		let messageDTO = try req.content.decode(CreateMessageDTO.self)
+		let message = Message(
+			id: UUID(),
+			content: messageDTO.content,
+			senderID: messageDTO.senderID,
+			receiverID: messageDTO.receiverID,
+			createdAt: Date()
+		)
+		Storage.shared.messages.append(message)
 
-        // Broadcast the message to WebSocket clients
-        let messageString = "\(message.senderID.uuidString): \(message.content)"
-        WebSocketManager.shared.broadcast(message: messageString)
-        return .ok
-    }
+		// Broadcast the message to WebSocket clients
+		let messageString = try JSONEncoder().encode(message)
+		let messageStringFormatted = String(data: messageString, encoding: .utf8) ?? ""
+		WebSocketManager.shared.broadcast(message: messageStringFormatted)
+		return .ok
+	}
 
     // HTTP endpoint for retrieving message history
     func getMessageHistory(req: Request) throws -> [Message] {
@@ -99,7 +100,10 @@ struct ChatController: RouteCollection {
             throw Abort(.badRequest)
         }
 
-        return Storage.shared.messages.filter { $0.senderID == senderID && $0.receiverID == receiverID }
+		return Storage.shared.messages.filter {
+			($0.senderID == senderID && $0.receiverID == receiverID) ||
+			($0.senderID == receiverID && $0.receiverID == senderID)
+		}
     }
 }
 

@@ -24,7 +24,7 @@ struct ChatModule: Module {
         guard let userId = params["userId"] as? String else {
             return AnyView(Text("User ID not provided"))
         }
-        return AnyView(ConversationView(userId: userId))
+        return AnyView(ConversationView(userId: UUID(uuidString: userId)!, receiverId: UUID()))
     }
     
     private func sendMessage(params: [String: Any]) {

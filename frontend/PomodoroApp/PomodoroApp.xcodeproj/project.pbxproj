@@ -51,6 +51,10 @@
 		D412BE672C43A903003BA88D /* ChatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE662C43A903003BA88D /* ChatModule.swift */; };
 		D412BE692C43A91D003BA88D /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE682C43A91D003BA88D /* ChatView.swift */; };
 		D412BE6B2C43A939003BA88D /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE6A2C43A939003BA88D /* ConversationView.swift */; };
+		D4B260582C52185900DA94D1 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B260572C52185900DA94D1 /* ConversationViewModel.swift */; };
+		D4B2605A2C5219B800DA94D1 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B260592C5219B800DA94D1 /* ChatService.swift */; };
+		D4B2605C2C521A6F00DA94D1 /* APIChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2605B2C521A6F00DA94D1 /* APIChatService.swift */; };
+		D4B2605F2C53636500DA94D1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2605E2C53636500DA94D1 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +122,10 @@
 		D412BE662C43A903003BA88D /* ChatModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModule.swift; sourceTree = "<group>"; };
 		D412BE682C43A91D003BA88D /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D412BE6A2C43A939003BA88D /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		D4B260572C52185900DA94D1 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
+		D4B260592C5219B800DA94D1 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		D4B2605B2C521A6F00DA94D1 /* APIChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIChatService.swift; sourceTree = "<group>"; };
+		D4B2605E2C53636500DA94D1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,7 @@
 		BF1B77AC2BFD8F0600DF8583 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D4B2605D2C521A7B00DA94D1 /* Chat */,
 				BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */,
 				BF6B9A2C2BF481D800C6F64A /* APIGatewayWebSocketService.swift */,
 				BF1B77992BFC6B9700DF8583 /* AuthService.swift */,
@@ -290,10 +299,21 @@
 			isa = PBXGroup;
 			children = (
 				D412BE662C43A903003BA88D /* ChatModule.swift */,
+				D4B2605E2C53636500DA94D1 /* Message.swift */,
 				D412BE682C43A91D003BA88D /* ChatView.swift */,
+				D4B260572C52185900DA94D1 /* ConversationViewModel.swift */,
 				D412BE6A2C43A939003BA88D /* ConversationView.swift */,
 			);
 			path = ChatModule;
+			sourceTree = "<group>";
+		};
+		D4B2605D2C521A7B00DA94D1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				D4B260592C5219B800DA94D1 /* ChatService.swift */,
+				D4B2605B2C521A6F00DA94D1 /* APIChatService.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +459,7 @@
 				BF116A6E2C1C07AC00C90267 /* TodoListView.swift in Sources */,
 				BF1F747C2C32806F0064ED09 /* InMemoryFriendsService.swift in Sources */,
 				BF1B77A72BFD8AE400DF8583 /* SettingsModule.swift in Sources */,
+				D4B2605C2C521A6F00DA94D1 /* APIChatService.swift in Sources */,
 				BF1B779C2BFC6C3C00DF8583 /* CognitoAuthService.swift in Sources */,
 				BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */,
 				BF1B77B22BFD963100DF8583 /* PomodoroModule.swift in Sources */,
@@ -460,6 +481,7 @@
 				BF1B77A92BFD8CCF00DF8583 /* AppState.swift in Sources */,
 				BF6B9A342BF481D800C6F64A /* TimerViewModel.swift in Sources */,
 				BF116A702C1C07C100C90267 /* TodoListViewModel.swift in Sources */,
+				D4B2605A2C5219B800DA94D1 /* ChatService.swift in Sources */,
 				BF1B77AB2BFD8D9700DF8583 /* LoginModule.swift in Sources */,
 				BF1F74762C327C490064ED09 /* FriendsListView.swift in Sources */,
 				BF6B9A322BF481D800C6F64A /* PomodoroController.swift in Sources */,
@@ -470,6 +492,8 @@
 				D412BE692C43A91D003BA88D /* ChatView.swift in Sources */,
 				BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */,
 				BF116A6B2C1C056D00C90267 /* TodoModule.swift in Sources */,
+				D4B2605F2C53636500DA94D1 /* Message.swift in Sources */,
+				D4B260582C52185900DA94D1 /* ConversationViewModel.swift in Sources */,
 				D412BE6B2C43A939003BA88D /* ConversationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

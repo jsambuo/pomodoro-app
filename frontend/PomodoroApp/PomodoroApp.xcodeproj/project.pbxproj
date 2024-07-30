@@ -172,7 +172,6 @@
 		BF1B77AC2BFD8F0600DF8583 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D4B2605D2C521A7B00DA94D1 /* Chat */,
 				BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */,
 				BF6B9A2C2BF481D800C6F64A /* APIGatewayWebSocketService.swift */,
 				BF1B77992BFC6B9700DF8583 /* AuthService.swift */,
@@ -298,6 +297,7 @@
 		D412BE652C43A8E9003BA88D /* ChatModule */ = {
 			isa = PBXGroup;
 			children = (
+				D4B2605D2C521A7B00DA94D1 /* ChatService */,
 				D412BE662C43A903003BA88D /* ChatModule.swift */,
 				D4B2605E2C53636500DA94D1 /* Message.swift */,
 				D412BE682C43A91D003BA88D /* ChatView.swift */,
@@ -307,13 +307,13 @@
 			path = ChatModule;
 			sourceTree = "<group>";
 		};
-		D4B2605D2C521A7B00DA94D1 /* Chat */ = {
+		D4B2605D2C521A7B00DA94D1 /* ChatService */ = {
 			isa = PBXGroup;
 			children = (
 				D4B260592C5219B800DA94D1 /* ChatService.swift */,
 				D4B2605B2C521A6F00DA94D1 /* APIChatService.swift */,
 			);
-			path = Chat;
+			path = ChatService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

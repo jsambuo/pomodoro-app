@@ -16,7 +16,7 @@ struct MainApp: App {
     
     init() {
         do {
-            try DIContainer.shared.register(AuthService.self, service: CognitoAuthService(clientId: "[replaceme]"))
+            try DIContainer.shared.register(AuthService.self, service: InMemoryAuthService())
             try DIContainer.shared.register(WebSocketService.self, service: APIGatewayWebSocketService(url: URL(string: "ws://localhost:8080/echo")!))
             try DIContainer.shared.register(TodoService.self, service: InMemoryTodoService())
             try DIContainer.shared.register(FriendsService.self, service: InMemoryFriendsService())

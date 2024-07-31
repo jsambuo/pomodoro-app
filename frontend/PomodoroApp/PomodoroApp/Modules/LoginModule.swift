@@ -42,8 +42,8 @@ struct LoginView: View {
             TextField("Email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .disableAutocorrection(true)
-//                .textInputAutocapitalization(.never)
-//                .keyboardType(.emailAddress)
+                .textInputAutocapitalization(.never)
+                .keyboardType(.emailAddress)
                 .padding()
             
             SecureField("Password", text: $password)
@@ -70,14 +70,6 @@ struct LoginView: View {
                 }
                 .padding()
             }
-            
-            Button(action: {
-                // Simulate login action
-                appState.state = .loggedIn(authToken: "")
-            }) {
-                Text("Log In")
-            }
-            .padding()
             
             // Link to SignUpView using NavigationLink
             NavigationLink(destination: RouteView("/signup")) {

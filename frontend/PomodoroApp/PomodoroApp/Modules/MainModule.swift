@@ -33,13 +33,17 @@ struct MainView: View {
                 .tabItem {
                     Label("Pomodoro", systemImage: "timer")
                 }
-            RouteView("/pomodoro-remote")
-                .tabItem {
-                    Label("Remote", systemImage: "iphone")
-                }
             RouteView("/friends")
                 .tabItem {
                     Label("Friends", systemImage: "gear")
+                }
+            RouteView("/settings")
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
+            RouteView("/pomodoro-remote")
+                .tabItem {
+                    Label("Remote", systemImage: "iphone")
                 }
         }
     }

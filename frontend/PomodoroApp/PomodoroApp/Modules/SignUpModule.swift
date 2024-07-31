@@ -108,9 +108,6 @@ struct SignUpView: View {
             do {
                 try await authService.signup(email: email, password: password)
                 print("Sign up successful.")
-                // Handle successful sign-up (e.g., navigate to login view)
-                // Simulate sign up action
-                appState.state = .loggedIn(authToken: "")
             } catch {
                 signUpError = "Sign up failed: \(error.localizedDescription)"
             }

@@ -6,9 +6,10 @@ import ProjectI // Import ProjectI for DIContainer and @Inject
 class ConversationViewModel: ObservableObject {
 	@Published var messageText: String = ""
 	@Published var receivedMessages: [Message] = []
+	@Published var receiverName: String = ""
+	@Published var receiverAvatar: String = ""
 
 	private var cancellables = Set<AnyCancellable>()
-	@Inject private var webSocketService: WebSocketService
 	@Inject private var chatService: ChatService
 
 	let userId: UUID
@@ -18,12 +19,13 @@ class ConversationViewModel: ObservableObject {
 		self.userId = userId
 		self.receiverId = receiverId
 
-		subscribeToWebSocket()
+		subscribeToChatService()
 		loadChatHistory()
+		loadReceiverInfo()
 	}
 
-	private func subscribeToWebSocket() {
-		webSocketService.messageReceivedPublisher
+	private func subscribeToChatService() {
+		chatService.messageReceivedPublisher
 			.receive(on: DispatchQueue.main) // Ensure messages are received on the main thread
 			.sink { [weak self] message in
 				guard let self = self else { return }
@@ -31,20 +33,6 @@ class ConversationViewModel: ObservableObject {
 				if let data = message.data(using: .utf8), let receivedMessage = try? JSONDecoder().decode(Message.self, from: data) {
 					self.receivedMessages.append(receivedMessage)
 				}
-			}
-			.store(in: &cancellables)
-
-		webSocketService.connectPublisher
-			.receive(on: DispatchQueue.main) // Ensure connection events are received on the main thread
-			.sink { [weak self] in
-				print("Connected to WebSocket")
-			}
-			.store(in: &cancellables)
-
-		webSocketService.disconnectPublisher
-			.receive(on: DispatchQueue.main) // Ensure disconnection events are received on the main thread
-			.sink { [weak self] in
-				print("Disconnected from WebSocket")
 			}
 			.store(in: &cancellables)
 	}
@@ -58,6 +46,28 @@ class ConversationViewModel: ObservableObject {
 				print("Failed to load chat history: \(error)")
 			}
 		}
+	}
+
+	private func loadReceiverInfo() {
+		// Load receiver information from some data source, e.g., a user service
+		// This is a placeholder implementation
+		Task {
+			// Fetch receiver's info from a service or database
+			if let receiver = getUserInfo(userID: receiverId) {
+				self.receiverName = receiver.name
+				self.receiverAvatar = receiver.avatar
+			}
+		}
+	}
+
+	private func getUserInfo(userID: UUID) -> User? {
+		// This is a placeholder implementation for fetching user info
+		// Since we don't have access to the actual user data fetching logic,
+		// we can use a mock implementation similar to InMemoryChatService for demo purposes.
+		return [
+			User(id: UUID(uuidString: "0FDAF1F2-F01B-4E6F-A918-CA68E1EA244C")!, name: "Alice", email: "alice@example.com", avatar: "https://randomuser.me/api/portraits/men/42.jpg"),
+			User(id: UUID(uuidString: "30104AE5-947D-4CF9-A335-F4F51994A92D")!, name: "Bob", email: "bob@example.com", avatar: "https://randomuser.me/api/portraits/women/47.jpg")
+		].first { $0.id == userID }
 	}
 
 	func sendMessage() {

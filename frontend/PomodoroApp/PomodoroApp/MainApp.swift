@@ -25,7 +25,8 @@ struct MainApp: App {
 >>>>>>> 0e4aa5b (feat(chat): enhance chat functionality with async message handling)
             try DIContainer.shared.register(TodoService.self, service: InMemoryTodoService())
             try DIContainer.shared.register(FriendsService.self, service: InMemoryFriendsService())
-            try DIContainer.shared.register(ChatService.self, service: APIChatService(baseURL: URL(string: "http://127.0.0.1:8080/")!))
+//            try DIContainer.shared.register(ChatService.self, service: APIChatService(baseURL: URL(string: "http://127.0.0.1:8080/")!))
+			try DIContainer.shared.register(ChatService.self, service: InMemoryChatService())
         } catch {
             assertionFailure("Error registering depedency: \(error)")
         }

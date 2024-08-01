@@ -51,10 +51,14 @@
 		D412BE672C43A903003BA88D /* ChatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE662C43A903003BA88D /* ChatModule.swift */; };
 		D412BE692C43A91D003BA88D /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE682C43A91D003BA88D /* ChatView.swift */; };
 		D412BE6B2C43A939003BA88D /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE6A2C43A939003BA88D /* ConversationView.swift */; };
+		D4873F6B2C58B2C800F428C6 /* InMemoryChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4873F6A2C58B2C800F428C6 /* InMemoryChatService.swift */; };
+		D4873F6D2C5B529F00F428C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4873F6C2C5B529F00F428C6 /* User.swift */; };
+		D4873F702C5B52D400F428C6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4873F6F2C5B52D400F428C6 /* Message.swift */; };
+		D4873F742C5B531F00F428C6 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4873F732C5B531F00F428C6 /* ChatViewModel.swift */; };
+		D4873F762C5B5A5900F428C6 /* UserTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4873F752C5B5A5900F428C6 /* UserTitleView.swift */; };
 		D4B260582C52185900DA94D1 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B260572C52185900DA94D1 /* ConversationViewModel.swift */; };
 		D4B2605A2C5219B800DA94D1 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B260592C5219B800DA94D1 /* ChatService.swift */; };
 		D4B2605C2C521A6F00DA94D1 /* APIChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2605B2C521A6F00DA94D1 /* APIChatService.swift */; };
-		D4B2605F2C53636500DA94D1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2605E2C53636500DA94D1 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,10 +126,14 @@
 		D412BE662C43A903003BA88D /* ChatModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModule.swift; sourceTree = "<group>"; };
 		D412BE682C43A91D003BA88D /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D412BE6A2C43A939003BA88D /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		D4873F6A2C58B2C800F428C6 /* InMemoryChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryChatService.swift; sourceTree = "<group>"; };
+		D4873F6C2C5B529F00F428C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D4873F6F2C5B52D400F428C6 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D4873F732C5B531F00F428C6 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		D4873F752C5B5A5900F428C6 /* UserTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTitleView.swift; sourceTree = "<group>"; };
 		D4B260572C52185900DA94D1 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
 		D4B260592C5219B800DA94D1 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		D4B2605B2C521A6F00DA94D1 /* APIChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIChatService.swift; sourceTree = "<group>"; };
-		D4B2605E2C53636500DA94D1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,20 +305,48 @@
 		D412BE652C43A8E9003BA88D /* ChatModule */ = {
 			isa = PBXGroup;
 			children = (
-				D4B2605D2C521A7B00DA94D1 /* ChatService */,
 				D412BE662C43A903003BA88D /* ChatModule.swift */,
-				D4B2605E2C53636500DA94D1 /* Message.swift */,
-				D412BE682C43A91D003BA88D /* ChatView.swift */,
-				D4B260572C52185900DA94D1 /* ConversationViewModel.swift */,
-				D412BE6A2C43A939003BA88D /* ConversationView.swift */,
+				D4B2605D2C521A7B00DA94D1 /* ChatService */,
+				D4873F6E2C5B52B200F428C6 /* Models */,
+				D4873F712C5B52F000F428C6 /* Views */,
+				D4873F722C5B530E00F428C6 /* ViewModels */,
 			);
 			path = ChatModule;
+			sourceTree = "<group>";
+		};
+		D4873F6E2C5B52B200F428C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4873F6F2C5B52D400F428C6 /* Message.swift */,
+				D4873F6C2C5B529F00F428C6 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4873F712C5B52F000F428C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D412BE682C43A91D003BA88D /* ChatView.swift */,
+				D4873F752C5B5A5900F428C6 /* UserTitleView.swift */,
+				D412BE6A2C43A939003BA88D /* ConversationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4873F722C5B530E00F428C6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D4B260572C52185900DA94D1 /* ConversationViewModel.swift */,
+				D4873F732C5B531F00F428C6 /* ChatViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D4B2605D2C521A7B00DA94D1 /* ChatService */ = {
 			isa = PBXGroup;
 			children = (
 				D4B260592C5219B800DA94D1 /* ChatService.swift */,
+				D4873F6A2C58B2C800F428C6 /* InMemoryChatService.swift */,
 				D4B2605B2C521A6F00DA94D1 /* APIChatService.swift */,
 			);
 			path = ChatService;
@@ -455,6 +491,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1B77A52BFD88D900DF8583 /* MainModule.swift in Sources */,
+				D4873F6B2C58B2C800F428C6 /* InMemoryChatService.swift in Sources */,
+				D4873F762C5B5A5900F428C6 /* UserTitleView.swift in Sources */,
 				BF6B9A352BF481D800C6F64A /* MenuBarController.swift in Sources */,
 				BF116A6E2C1C07AC00C90267 /* TodoListView.swift in Sources */,
 				BF1F747C2C32806F0064ED09 /* InMemoryFriendsService.swift in Sources */,
@@ -463,6 +501,8 @@
 				BF1B779C2BFC6C3C00DF8583 /* CognitoAuthService.swift in Sources */,
 				BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */,
 				BF1B77B22BFD963100DF8583 /* PomodoroModule.swift in Sources */,
+				D4873F702C5B52D400F428C6 /* Message.swift in Sources */,
+				D4873F742C5B531F00F428C6 /* ChatViewModel.swift in Sources */,
 				BF1F74782C3280380064ED09 /* FriendsService.swift in Sources */,
 				BF116A7A2C1C14B500C90267 /* TodoService.swift in Sources */,
 				BF5794782C1FF1AF00A54D68 /* APITodoService.swift in Sources */,
@@ -473,6 +513,7 @@
 				BF1F747A2C3280510064ED09 /* FriendsAPIService.swift in Sources */,
 				BF1B77BA2BFDC69700DF8583 /* PomodoroView.swift in Sources */,
 				BF116A762C1C0F4B00C90267 /* TodoCreateView.swift in Sources */,
+				D4873F6D2C5B529F00F428C6 /* User.swift in Sources */,
 				BF1B779A2BFC6B9700DF8583 /* AuthService.swift in Sources */,
 				BFBAC83A2C59F98600925A1A /* InMemoryAuthService.swift in Sources */,
 				BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */,
@@ -492,7 +533,6 @@
 				D412BE692C43A91D003BA88D /* ChatView.swift in Sources */,
 				BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */,
 				BF116A6B2C1C056D00C90267 /* TodoModule.swift in Sources */,
-				D4B2605F2C53636500DA94D1 /* Message.swift in Sources */,
 				D4B260582C52185900DA94D1 /* ConversationViewModel.swift in Sources */,
 				D412BE6B2C43A939003BA88D /* ConversationView.swift in Sources */,
 			);

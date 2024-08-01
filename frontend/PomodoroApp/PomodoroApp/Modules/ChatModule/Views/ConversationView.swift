@@ -22,16 +22,34 @@ struct ConversationView: View {
 										.background(Color.blue)
 										.foregroundColor(.white)
 										.cornerRadius(8)
+										.padding([.leading, .top, .bottom], 10)
 								} else {
-									Text(message.content)
-										.padding()
-										.background(Color.gray.opacity(0.2))
-										.foregroundColor(.black)
-										.cornerRadius(8)
+									HStack {
+										if let url = URL(string: message.senderAvatar) {
+											AsyncImage(url: url) { image in
+												image.resizable()
+											} placeholder: {
+												Image(systemName: "person.fill")
+											}
+											.frame(width: 40, height: 40)
+											.cornerRadius(20)
+										} else {
+											Image(systemName: "person.fill") // Placeholder for avatar image
+												.resizable()
+												.frame(width: 40, height: 40)
+												.cornerRadius(20)
+										}
+										Text(message.content)
+											.padding()
+											.background(Color.gray.opacity(0.2))
+											.foregroundColor(.black)
+											.cornerRadius(8)
+									}
+									.padding([.trailing, .top, .bottom], 10)
 									Spacer()
 								}
 							}
-							.padding(.bottom, 5)
+							.padding(.horizontal, 10)
 							.id(message.id) // Assign an id to each message view
 						}
 					}
@@ -46,13 +64,17 @@ struct ConversationView: View {
 			HStack {
 				TextField("Enter message", text: $viewModel.messageText)
 					.textFieldStyle(RoundedBorderTextFieldStyle())
+					.onSubmit {
+						viewModel.sendMessage()
+					}
 				Button(action: viewModel.sendMessage) {
 					Text("Send")
 				}
+				.padding(.leading, 10)
 			}
 			.padding()
 		}
-		.navigationTitle("Conversation")
+		.navigationTitle(viewModel.receiverName)
 	}
 
 	@MainActor

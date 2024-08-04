@@ -1,11 +1,11 @@
 import SwiftUI
 
-struct ConversationView: View {
-	@StateObject private var viewModel: ConversationViewModel
+struct ChatDetailView: View {
+	@StateObject private var viewModel: ChatDetailViewModel
 	@State private var scrollViewProxy: ScrollViewProxy? = nil
 
-	init(userId: UUID, receiverId: UUID) {
-		_viewModel = StateObject(wrappedValue: ConversationViewModel(userId: userId, receiverId: receiverId))
+	init(userId: UUID, chatId: UUID) {
+		_viewModel = StateObject(wrappedValue: ChatDetailViewModel(userId: userId, chatId: chatId))
 	}
 
 	var body: some View {
@@ -56,8 +56,9 @@ struct ConversationView: View {
 				}
 				.onAppear {
 					scrollViewProxy = proxy
+					scrollToBottom()
 				}
-				.onChange(of: viewModel.receivedMessages) { _ in
+				.onChange(of: viewModel.receivedMessages) {
 					scrollToBottom()
 				}
 			}
@@ -83,8 +84,8 @@ struct ConversationView: View {
 	}
 }
 
-struct ConversationView_Previews: PreviewProvider {
+struct ChatDetailView_Previews: PreviewProvider {
 	static var previews: some View {
-		ConversationView(userId: UUID(), receiverId: UUID())
+		ChatDetailView(userId: UUID(), chatId: UUID())
 	}
 }

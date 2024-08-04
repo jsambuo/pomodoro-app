@@ -2,9 +2,9 @@ import Foundation
 import Combine
 
 protocol ChatService {
-	var messageReceivedPublisher: AnyPublisher<String, Never> { get }
-	
-	func sendMessage(content: String, senderID: UUID, receiverID: UUID) async throws
-	func fetchChatHistory(senderID: UUID, receiverID: UUID) async throws -> [Message]
-	func fetchUsers() async throws -> [User]
+	var messageReceivedPublisher: AnyPublisher<Message, Never> { get }
+
+	func sendMessage(chatID: UUID, content: String, senderID: UUID) async throws
+	func getMessages(chatID: UUID) async throws -> [Message]
+	func getUserChats(for userID: UUID) async throws -> [Chat]
 }

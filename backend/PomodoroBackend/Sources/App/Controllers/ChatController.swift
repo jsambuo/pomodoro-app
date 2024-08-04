@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jason Wang on 7/24/24.
-//
-
 import Vapor
 
 final class WebSocketManager {

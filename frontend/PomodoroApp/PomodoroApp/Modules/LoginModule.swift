@@ -24,7 +24,7 @@ struct LoginModule: Module {
 }
 
 struct LoginView: View {
-    @EnvironmentObject private var appState: AppState
+    @Inject private var appStateService: AppStateService
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var loginError: String?
@@ -49,6 +49,7 @@ struct LoginView: View {
             SecureField("Password", text: $password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
+                .onSubmit(login)
             
             if let loginError = loginError {
                 Text(loginError)
@@ -97,8 +98,7 @@ struct LoginView: View {
                 let token = try await authService.login(email: email, password: password)
                 self.token = token
                 print("Login successful. Token: \(token)")
-                // Handle successful login (e.g., navigate to another view)
-                appState.state = .loggedIn(authToken: token)
+                appStateService.currentState = .loggedIn(authToken: token)
             } catch {
                 loginError = "Login failed: \(error.localizedDescription)"
             }

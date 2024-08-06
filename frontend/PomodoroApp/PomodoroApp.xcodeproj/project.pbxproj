@@ -21,7 +21,6 @@
 		BF1B77A32BFD877C00DF8583 /* ModuleKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF1B77A22BFD877C00DF8583 /* ModuleKit */; };
 		BF1B77A52BFD88D900DF8583 /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77A42BFD88D900DF8583 /* MainModule.swift */; };
 		BF1B77A72BFD8AE400DF8583 /* SettingsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77A62BFD8AE400DF8583 /* SettingsModule.swift */; };
-		BF1B77A92BFD8CCF00DF8583 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77A82BFD8CCF00DF8583 /* AppState.swift */; };
 		BF1B77AB2BFD8D9700DF8583 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77AA2BFD8D9700DF8583 /* LoginModule.swift */; };
 		BF1B77B02BFD903E00DF8583 /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77AF2BFD903E00DF8583 /* SignUpModule.swift */; };
 		BF1B77B22BFD963100DF8583 /* PomodoroModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B77B12BFD963100DF8583 /* PomodoroModule.swift */; };
@@ -42,6 +41,8 @@
 		BF6B9A342BF481D800C6F64A /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2A2BF481D800C6F64A /* TimerViewModel.swift */; };
 		BF6B9A352BF481D800C6F64A /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A292BF481D800C6F64A /* MenuBarController.swift */; };
 		BFBAC83A2C59F98600925A1A /* InMemoryAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBAC8392C59F98600925A1A /* InMemoryAuthService.swift */; };
+		BFC867082C61DF7200F47B47 /* AppStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC867072C61DF7200F47B47 /* AppStateService.swift */; };
+		BFC8670A2C61E00000F47B47 /* DefaultAppStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC867092C61E00000F47B47 /* DefaultAppStateService.swift */; };
 		BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE29782BF47BD300B2C76A /* MainApp.swift */; };
 		BFDE297D2BF47BD400B2C76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDE297C2BF47BD400B2C76A /* Assets.xcassets */; };
 		BFDE29812BF47BD400B2C76A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDE29802BF47BD400B2C76A /* Preview Assets.xcassets */; };
@@ -93,7 +94,6 @@
 		BF1B779B2BFC6C3C00DF8583 /* CognitoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoAuthService.swift; sourceTree = "<group>"; };
 		BF1B77A42BFD88D900DF8583 /* MainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
 		BF1B77A62BFD8AE400DF8583 /* SettingsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModule.swift; sourceTree = "<group>"; };
-		BF1B77A82BFD8CCF00DF8583 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BF1B77AA2BFD8D9700DF8583 /* LoginModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
 		BF1B77AF2BFD903E00DF8583 /* SignUpModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModule.swift; sourceTree = "<group>"; };
 		BF1B77B12BFD963100DF8583 /* PomodoroModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroModule.swift; sourceTree = "<group>"; };
@@ -114,6 +114,8 @@
 		BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
 		BF6B9A362BF4824600C6F64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BFBAC8392C59F98600925A1A /* InMemoryAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryAuthService.swift; sourceTree = "<group>"; };
+		BFC867072C61DF7200F47B47 /* AppStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateService.swift; sourceTree = "<group>"; };
+		BFC867092C61E00000F47B47 /* DefaultAppStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppStateService.swift; sourceTree = "<group>"; };
 		BFDE29752BF47BD300B2C76A /* PomodoroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE29782BF47BD300B2C76A /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		BFDE297C2BF47BD400B2C76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +192,8 @@
 				BF116A7B2C1C153C00C90267 /* InMemoryTodoService.swift */,
 				BF5794772C1FF1AF00A54D68 /* APITodoService.swift */,
 				BFBAC8392C59F98600925A1A /* InMemoryAuthService.swift */,
+				BFC867072C61DF7200F47B47 /* AppStateService.swift */,
+				BFC867092C61E00000F47B47 /* DefaultAppStateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -271,7 +275,6 @@
 				BF1B77AC2BFD8F0600DF8583 /* Services */,
 				BF6B9A362BF4824600C6F64A /* Info.plist */,
 				BFDE29782BF47BD300B2C76A /* MainApp.swift */,
-				BF1B77A82BFD8CCF00DF8583 /* AppState.swift */,
 				BFDE297C2BF47BD400B2C76A /* Assets.xcassets */,
 				BFDE297E2BF47BD400B2C76A /* PomodoroApp.entitlements */,
 				BFDE297F2BF47BD400B2C76A /* Preview Content */,
@@ -523,7 +526,7 @@
 				BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */,
 				BF1B77B02BFD903E00DF8583 /* SignUpModule.swift in Sources */,
 				D412BE672C43A903003BA88D /* ChatModule.swift in Sources */,
-				BF1B77A92BFD8CCF00DF8583 /* AppState.swift in Sources */,
+				BFC8670A2C61E00000F47B47 /* DefaultAppStateService.swift in Sources */,
 				BF6B9A342BF481D800C6F64A /* TimerViewModel.swift in Sources */,
 				BF116A702C1C07C100C90267 /* TodoListViewModel.swift in Sources */,
 				D4B2605A2C5219B800DA94D1 /* ChatService.swift in Sources */,
@@ -536,6 +539,7 @@
 				BF116A782C1C105100C90267 /* TodoCreateViewModel.swift in Sources */,
 				D412BE692C43A91D003BA88D /* ChatListView.swift in Sources */,
 				BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */,
+				BFC867082C61DF7200F47B47 /* AppStateService.swift in Sources */,
 				BF116A6B2C1C056D00C90267 /* TodoModule.swift in Sources */,
 				D4B260582C52185900DA94D1 /* ChatDetailViewModel.swift in Sources */,
 				D412BE6B2C43A939003BA88D /* ChatDetailView.swift in Sources */,

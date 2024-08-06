@@ -25,7 +25,6 @@ struct SignUpModule: Module {
 
 struct SignUpView: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var appState: AppState
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var confirmPassword: String = ""

@@ -11,11 +11,14 @@ import ProjectI
 
 @main
 struct MainApp: App {
-    @StateObject private var appState = AppState()
+    @StateObject private var appStateService: DefaultAppStateService
     private let moduleManager = ModuleManager()
     
     init() {
         do {
+            let defaultAppStateService = DefaultAppStateService()
+            self._appStateService = StateObject(wrappedValue: defaultAppStateService)
+            try DIContainer.shared.register(AppStateService.self, service: defaultAppStateService)
             try DIContainer.shared.register(AuthService.self, service: InMemoryAuthService())
             try DIContainer.shared.register(WebSocketService.self, service: APIGatewayWebSocketService(url: URL(string: "ws://localhost:8080/echo")!))
             try DIContainer.shared.register(TodoService.self, service: InMemoryTodoService())
@@ -41,15 +44,14 @@ struct MainApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                RouteView(appState.state.path)
+                RouteView(appStateService.appState.path)
             }
             .environmentObject(moduleManager)
-            .environmentObject(appState)
         }
     }
 }
 
-private extension AppState.State {
+private extension AppState {
     var path: String {
         switch self {
         case .loggedIn:

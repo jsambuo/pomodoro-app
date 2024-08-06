@@ -7,6 +7,7 @@
 
 import ModuleKit
 import SwiftUI
+import ProjectI
 
 struct SettingsModule: Module {
     var routes: [Route] {
@@ -23,7 +24,7 @@ struct SettingsModule: Module {
 }
 
 struct SettingsView: View {
-    @EnvironmentObject var appState: AppState
+    @Inject private var appStateService: AppStateService
 
     var body: some View {
         VStack {
@@ -40,7 +41,7 @@ struct SettingsView: View {
             
             Button(action: {
                 // Perform logout action
-                appState.state = .loggedOut
+                appStateService.currentState = .loggedOut
             }) {
                 Text("Log Out")
                     .foregroundColor(.red)

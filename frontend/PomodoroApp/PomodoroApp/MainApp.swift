@@ -16,13 +16,8 @@ struct MainApp: App {
     
     init() {
         do {
-<<<<<<< HEAD
             try DIContainer.shared.register(AuthService.self, service: InMemoryAuthService())
             try DIContainer.shared.register(WebSocketService.self, service: APIGatewayWebSocketService(url: URL(string: "ws://localhost:8080/echo")!))
-=======
-            try DIContainer.shared.register(AuthService.self, service: CognitoAuthService(clientId: "[replaceme]"))
-            try DIContainer.shared.register(WebSocketService.self, service: APIGatewayWebSocketService(url: URL(string: "ws://127.0.0.1:8080/api/chat/connect")!))
->>>>>>> 0e4aa5b (feat(chat): enhance chat functionality with async message handling)
             try DIContainer.shared.register(TodoService.self, service: InMemoryTodoService())
             try DIContainer.shared.register(FriendsService.self, service: InMemoryFriendsService())
 //            try DIContainer.shared.register(ChatService.self, service: APIChatService(baseURL: URL(string: "http://127.0.0.1:8080/")!))

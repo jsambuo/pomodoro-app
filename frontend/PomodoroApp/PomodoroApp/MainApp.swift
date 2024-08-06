@@ -20,6 +20,8 @@ struct MainApp: App {
             try DIContainer.shared.register(WebSocketService.self, service: APIGatewayWebSocketService(url: URL(string: "ws://localhost:8080/echo")!))
             try DIContainer.shared.register(TodoService.self, service: InMemoryTodoService())
             try DIContainer.shared.register(FriendsService.self, service: InMemoryFriendsService())
+//            try DIContainer.shared.register(ChatService.self, service: APIChatService(baseURL: URL(string: "http://127.0.0.1:8080/")!))
+			try DIContainer.shared.register(ChatService.self, service: InMemoryChatService())
         } catch {
             assertionFailure("Error registering depedency: \(error)")
         }
@@ -32,6 +34,7 @@ struct MainApp: App {
             PomodoroModule(),
             TodoModule(),
             FriendsListModule(),
+            ChatModule(),
         ])
     }
 

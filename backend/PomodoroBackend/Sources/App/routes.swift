@@ -7,7 +7,8 @@ func routes(_ app: Application) async throws {
     let todoController = TodoController(dynamoDB: dynamoDB)
     try app.register(collection: todoController)
     try app.register(collection: FriendsController(dynamoDB: dynamoDB))
-
+    let chatController = ChatController()
+    try app.register(collection: chatController)
     app.get { req async in
         "It works!"
     }

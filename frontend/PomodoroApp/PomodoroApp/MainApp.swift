@@ -38,6 +38,7 @@ struct MainApp: App {
             TodoModule(),
             FriendsListModule(),
             ChatModule(),
+            WorkoutModule(),
         ])
     }
 

@@ -29,6 +29,10 @@ struct MainView: View {
                 .tabItem {
                     Label("Todo", systemImage: "house")
                 }
+            RouteView("/workout/history")
+                .tabItem {
+                    Label("Workout", systemImage: "dumbbell")
+                }
             RouteView("/pomodoro")
                 .tabItem {
                     Label("Pomodoro", systemImage: "timer")

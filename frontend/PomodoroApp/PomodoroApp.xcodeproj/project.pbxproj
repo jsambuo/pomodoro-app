@@ -32,6 +32,11 @@
 		BF1F74782C3280380064ED09 /* FriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F74772C3280380064ED09 /* FriendsService.swift */; };
 		BF1F747A2C3280510064ED09 /* FriendsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F74792C3280510064ED09 /* FriendsAPIService.swift */; };
 		BF1F747C2C32806F0064ED09 /* InMemoryFriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F747B2C32806F0064ED09 /* InMemoryFriendsService.swift */; };
+		BF470AB42D0D5C5200BFFC5D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF470AB32D0D5C5200BFFC5D /* Model.swift */; };
+		BF470AB62D0D5C7C00BFFC5D /* WorkoutModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF470AB52D0D5C7C00BFFC5D /* WorkoutModule.swift */; };
+		BF470AB82D0D5C8800BFFC5D /* HistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF470AB72D0D5C8800BFFC5D /* HistoryScreen.swift */; };
+		BF470ABA2D0D5C9400BFFC5D /* RecordWorkoutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF470AB92D0D5C9400BFFC5D /* RecordWorkoutScreen.swift */; };
+		BF470ABC2D0D713E00BFFC5D /* WorkoutDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF470ABB2D0D713E00BFFC5D /* WorkoutDetailScreen.swift */; };
 		BF5794782C1FF1AF00A54D68 /* APITodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5794772C1FF1AF00A54D68 /* APITodoService.swift */; };
 		BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2E2BF481D800C6F64A /* WebSocketService.swift */; };
 		BF6B9A302BF481D800C6F64A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B9A2D2BF481D800C6F64A /* TimerView.swift */; };
@@ -104,6 +109,11 @@
 		BF1F74772C3280380064ED09 /* FriendsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsService.swift; sourceTree = "<group>"; };
 		BF1F74792C3280510064ED09 /* FriendsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPIService.swift; sourceTree = "<group>"; };
 		BF1F747B2C32806F0064ED09 /* InMemoryFriendsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFriendsService.swift; sourceTree = "<group>"; };
+		BF470AB32D0D5C5200BFFC5D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BF470AB52D0D5C7C00BFFC5D /* WorkoutModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModule.swift; sourceTree = "<group>"; };
+		BF470AB72D0D5C8800BFFC5D /* HistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreen.swift; sourceTree = "<group>"; };
+		BF470AB92D0D5C9400BFFC5D /* RecordWorkoutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWorkoutScreen.swift; sourceTree = "<group>"; };
+		BF470ABB2D0D713E00BFFC5D /* WorkoutDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailScreen.swift; sourceTree = "<group>"; };
 		BF5794772C1FF1AF00A54D68 /* APITodoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITodoService.swift; sourceTree = "<group>"; };
 		BF6B9A282BF481D800C6F64A /* PomodoroTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimer.swift; sourceTree = "<group>"; };
 		BF6B9A292BF481D800C6F64A /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
@@ -201,6 +211,7 @@
 		BF1B77AD2BFD8F1A00DF8583 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BF470AB12D0D5C1300BFFC5D /* WorkoutModule */,
 				D412BE652C43A8E9003BA88D /* ChatModule */,
 				BF1F74722C327C260064ED09 /* FriendsListModule */,
 				BF116A6C2C1C076C00C90267 /* TodoModule */,
@@ -245,6 +256,18 @@
 				BF1F747B2C32806F0064ED09 /* InMemoryFriendsService.swift */,
 			);
 			path = FriendsListModule;
+			sourceTree = "<group>";
+		};
+		BF470AB12D0D5C1300BFFC5D /* WorkoutModule */ = {
+			isa = PBXGroup;
+			children = (
+				BF470AB32D0D5C5200BFFC5D /* Model.swift */,
+				BF470AB52D0D5C7C00BFFC5D /* WorkoutModule.swift */,
+				BF470AB72D0D5C8800BFFC5D /* HistoryScreen.swift */,
+				BF470AB92D0D5C9400BFFC5D /* RecordWorkoutScreen.swift */,
+				BF470ABB2D0D713E00BFFC5D /* WorkoutDetailScreen.swift */,
+			);
+			path = WorkoutModule;
 			sourceTree = "<group>";
 		};
 		BFDE296C2BF47BD300B2C76A = {
@@ -503,7 +526,9 @@
 				BF116A6E2C1C07AC00C90267 /* TodoListView.swift in Sources */,
 				BF1F747C2C32806F0064ED09 /* InMemoryFriendsService.swift in Sources */,
 				BF1B77A72BFD8AE400DF8583 /* SettingsModule.swift in Sources */,
+				BF470ABA2D0D5C9400BFFC5D /* RecordWorkoutScreen.swift in Sources */,
 				D4B2605C2C521A6F00DA94D1 /* APIChatService.swift in Sources */,
+				BF470AB82D0D5C8800BFFC5D /* HistoryScreen.swift in Sources */,
 				BF1B779C2BFC6C3C00DF8583 /* CognitoAuthService.swift in Sources */,
 				BF6B9A2F2BF481D800C6F64A /* WebSocketService.swift in Sources */,
 				BF1B77B22BFD963100DF8583 /* PomodoroModule.swift in Sources */,
@@ -535,14 +560,17 @@
 				BF6B9A322BF481D800C6F64A /* PomodoroController.swift in Sources */,
 				BF116A7C2C1C153C00C90267 /* InMemoryTodoService.swift in Sources */,
 				BF1F74742C327C380064ED09 /* FriendsListModule.swift in Sources */,
+				BF470AB42D0D5C5200BFFC5D /* Model.swift in Sources */,
 				BF116A722C1C07F600C90267 /* TodoDetailView.swift in Sources */,
 				BF116A782C1C105100C90267 /* TodoCreateViewModel.swift in Sources */,
 				D412BE692C43A91D003BA88D /* ChatListView.swift in Sources */,
 				BFDE29792BF47BD300B2C76A /* MainApp.swift in Sources */,
+				BF470ABC2D0D713E00BFFC5D /* WorkoutDetailScreen.swift in Sources */,
 				BFC867082C61DF7200F47B47 /* AppStateService.swift in Sources */,
 				BF116A6B2C1C056D00C90267 /* TodoModule.swift in Sources */,
 				D4B260582C52185900DA94D1 /* ChatDetailViewModel.swift in Sources */,
 				D412BE6B2C43A939003BA88D /* ChatDetailView.swift in Sources */,
+				BF470AB62D0D5C7C00BFFC5D /* WorkoutModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

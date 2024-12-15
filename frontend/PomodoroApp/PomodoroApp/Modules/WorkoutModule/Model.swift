@@ -1,27 +1,40 @@
-//
-//  Model.swift
-//  PomodoroApp
-//
-//  Created by Jimmy on 12/14/24.
-//
-
 import Foundation
+import SwiftData
 
-struct Exercise: Identifiable {
-    let id = UUID()
-    let name: String
-    var sets: [WorkoutSet] = []
-}
-
-struct WorkoutSet: Identifiable {
-    let id = UUID()
-    let weightLifted: Double
-    let repsCompleted: Int
-}
-
-struct Workout: Identifiable {
-    let id = UUID()
-    let startTime: Date
-    var endTime: Date? = nil
+@Model
+final class Workout {
+    @Attribute(.unique) var id: UUID = UUID()
+    var startTime: Date
+    var endTime: Date?
     var exercises: [Exercise] = []
+
+    init(startTime: Date, endTime: Date? = nil, exercises: [Exercise] = []) {
+        self.startTime = startTime
+        self.endTime = endTime
+        self.exercises = exercises
+    }
+}
+
+@Model
+final class Exercise {
+    @Attribute(.unique) var id: UUID = UUID()
+    var name: String
+    var sets: [WorkoutSet] = []
+
+    init(name: String, sets: [WorkoutSet] = []) {
+        self.name = name
+        self.sets = sets
+    }
+}
+
+@Model
+final class WorkoutSet {
+    @Attribute(.unique) var id: UUID = UUID()
+    var weightLifted: Double
+    var repsCompleted: Int
+
+    init(weightLifted: Double, repsCompleted: Int) {
+        self.weightLifted = weightLifted
+        self.repsCompleted = repsCompleted
+    }
 }

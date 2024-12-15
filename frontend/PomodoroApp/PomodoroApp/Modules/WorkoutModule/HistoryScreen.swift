@@ -1,22 +1,22 @@
 import SwiftUI
-import ModuleKit
+import SwiftData
 
 struct HistoryScreen: View {
-    @State private var workouts: [Workout] = []  // Simulates a storage system.
+    @Query private var workouts: [Workout]
+    @Environment(\.modelContext) private var modelContext
     @State private var isPresentingWorkoutSheet = false
-    @State private var currentWorkout: Workout?
 
     var body: some View {
         NavigationStack {
-            NavigationView {
-                VStack {
-                    if workouts.isEmpty {
-                        Text("No Workouts Yet")
-                            .font(.headline)
-                            .foregroundColor(.gray)
-                            .padding()
-                    } else {
-                        List(workouts) { workout in
+            VStack {
+                if workouts.isEmpty {
+                    Text("No Workouts Yet")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                        .padding()
+                } else {
+                    List {
+                        ForEach(workouts) { workout in
                             NavigationLink(destination: WorkoutDetailScreen(workout: workout)) {
                                 VStack(alignment: .leading, spacing: 8) {
                                     Text("Workout on \(workout.startTime, style: .date)")
@@ -33,32 +33,43 @@ struct HistoryScreen: View {
                                             .foregroundColor(.secondary)
                                     }
                                 }
-                                .padding(.vertical, 4)
                             }
                         }
+                        .onDelete(perform: deleteWorkout)
                     }
+                }
 
-                    Button("Start New Workout") {
-                        currentWorkout = Workout(startTime: Date())  // Create a new workout.
-                        isPresentingWorkoutSheet = true
-                    }
-                    .padding()
+                Button("Start New Workout") {
+                    isPresentingWorkoutSheet = true
                 }
-                .navigationTitle("Workout History")
-                .sheet(isPresented: $isPresentingWorkoutSheet) {
-                    if let workout = currentWorkout {
-                        RecordWorkoutScreen(workout: workout) { completedWorkout in
-                            workouts.append(completedWorkout)  // Save the completed workout.
-                            currentWorkout = nil
-                            isPresentingWorkoutSheet = false
-                        }
-                    }
-                }
+                .padding()
+            }
+            .navigationTitle("Workout History")
+            .sheet(isPresented: $isPresentingWorkoutSheet) {
+                recordWorkoutScreen()
             }
         }
     }
 
-    // Helper function to format workout duration
+    // MARK: - Delete Workout
+    private func deleteWorkout(at offsets: IndexSet) {
+        for index in offsets {
+            let workoutToDelete = workouts[index]
+            modelContext.delete(workoutToDelete)
+        }
+    }
+
+    private func recordWorkoutScreen() -> some View {
+        let workout = Workout(startTime: Date())
+        return RecordWorkoutScreen(workout: workout) { completedWorkout in
+            saveWorkout(completedWorkout)
+        }
+    }
+
+    private func saveWorkout(_ completedWorkout: Workout) {
+        modelContext.insert(completedWorkout)
+    }
+
     private func formatDuration(_ duration: TimeInterval) -> String {
         let minutes = Int(duration) / 60
         let seconds = Int(duration) % 60
@@ -69,5 +80,6 @@ struct HistoryScreen: View {
 struct HistoryScreen_Previews: PreviewProvider {
     static var previews: some View {
         HistoryScreen()
+            .modelContainer(try! ModelContainer(for: Workout.self, Exercise.self, WorkoutSet.self))
     }
 }
